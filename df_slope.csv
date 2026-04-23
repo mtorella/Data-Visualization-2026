@@ -1,0 +1,45 @@
+iso3,ghg_2014,ghg_2023,ghg_change_pct,ghg_change_abs,country_name_ghg,region
+AUS,22.74019,19.92922,-12.36,-2.811,Australia,East Asia & Pacific
+AUT,9.033319,7.523844,-16.71,-1.509,Austria,Europe & Central Asia
+BEL,10.21425,8.385736,-17.9,-1.829,Belgium,Europe & Central Asia
+CAN,20.97687,17.65728,-15.83,-3.32,Canada,North America
+CZE,11.91482,9.441118,-20.76,-2.474,Czechia,Europe & Central Asia
+DNK,9.377474,6.558307,-30.06,-2.819,Denmark,Europe & Central Asia
+EST,15.96656,7.945063,-50.24,-8.021,Estonia,Europe & Central Asia
+FIN,10.7283,7.329767,-31.68,-3.399,Finland,Europe & Central Asia
+FRA,7.046576,5.653277,-19.77,-1.393,France,Europe & Central Asia
+DEU,10.98049,7.948367,-27.61,-3.032,Germany,Europe & Central Asia
+GRC,9.174307,7.022876,-23.45,-2.151,Greece,Europe & Central Asia
+HUN,6.00465,5.607061,-6.62,-0.398,Hungary,Europe & Central Asia
+ISL,14.53881,11.988,-17.54,-2.551,Iceland,Europe & Central Asia
+IRL,12.47143,10.57115,-15.24,-1.9,Ireland,Europe & Central Asia
+ISR,9.849664,8.432515,-14.39,-1.417,Israel,Middle East & North Africa
+ITA,7.120819,6.451943,-9.39,-0.669,Italy,Europe & Central Asia
+JPN,10.5282,8.596324,-18.35,-1.932,Japan,East Asia & Pacific
+LVA,5.373127,5.295873,-1.44,-0.077,Latvia,Europe & Central Asia
+LTU,6.594755,6.254073,-5.17,-0.341,Lithuania,Europe & Central Asia
+LUX,19.4309,11.68083,-39.89,-7.75,Luxembourg,Europe & Central Asia
+NLD,10.9876,7.85981,-28.47,-3.128,Netherlands,Europe & Central Asia
+NZL,18.4279,14.77261,-19.84,-3.655,New Zealand,East Asia & Pacific
+NOR,10.45206,8.437336,-19.28,-2.015,Norway,Europe & Central Asia
+POL,9.929695,8.979228,-9.57,-0.95,Poland,Europe & Central Asia
+PRT,6.078352,5.093018,-16.21,-0.985,Portugal,Europe & Central Asia
+SVK,7.319902,6.537386,-10.69,-0.783,Slovak Republic,Europe & Central Asia
+SVN,8.093888,6.98851,-13.66,-1.105,Slovenia,Europe & Central Asia
+ESP,6.857054,5.634706,-17.83,-1.222,Spain,Europe & Central Asia
+SWE,5.515628,4.206605,-23.73,-1.309,Sweden,Europe & Central Asia
+CHE,6.044053,4.594231,-23.99,-1.45,Switzerland,Europe & Central Asia
+TUR,5.997226,6.862767,14.43,0.866,Türkiye,Europe & Central Asia
+GBR,8.215401,5.613822,-31.67,-2.602,United Kingdom,Europe & Central Asia
+BLR,9.893406,9.56043,-3.37,-0.333,Belarus,Europe & Central Asia
+BGR,7.927114,6.675433,-15.79,-1.252,Bulgaria,
+HRV,5.758433,6.524332,13.3,0.766,Croatia,
+CYP,6.882424,6.317472,-8.21,-0.565,Cyprus,
+KAZ,20.52191,17.01328,-17.1,-3.509,Kazakhstan,
+LIE,5.356115,4.22602,-21.1,-1.13,Liechtenstein,
+MLT,6.549833,4.214103,-35.66,-2.336,Malta,
+MCO,2.346737,1.534798,-34.6,-0.812,Monaco,
+ROU,5.914941,5.432569,-8.16,-0.482,Romania,
+RUS,13.6596,14.32121,4.84,0.662,Russia,
+SRB,7.617867,9.169923,20.37,1.552,Serbia,
+UKR,8.028714,6.171138,-23.14,-1.858,Ukraine,
