@@ -32,17 +32,17 @@ CHE,Switzerland,2023,4.594231,Europe & Central Asia,-23.99,-1.45
 TUR,Türkiye,2023,6.862767,Europe & Central Asia,14.43,0.866
 GBR,United Kingdom,2023,5.613822,Europe & Central Asia,-31.67,-2.602
 BLR,Belarus,2023,9.56043,Europe & Central Asia,-3.37,-0.333
-BGR,Bulgaria,2023,6.675433,,-15.79,-1.252
-HRV,Croatia,2023,6.524332,,13.3,0.766
-CYP,Cyprus,2023,6.317472,,-8.21,-0.565
-KAZ,Kazakhstan,2023,17.01328,,-17.1,-3.509
-LIE,Liechtenstein,2023,4.22602,,-21.1,-1.13
-MLT,Malta,2023,4.214103,,-35.66,-2.336
-MCO,Monaco,2023,1.534798,,-34.6,-0.812
-ROU,Romania,2023,5.432569,,-8.16,-0.482
-RUS,Russia,2023,14.32121,,4.84,0.662
-SRB,Serbia,2023,9.169923,,20.37,1.552
-UKR,Ukraine,2023,6.171138,,-23.14,-1.858
+BGR,Bulgaria,2023,6.675433,Europe & Central Asia,-15.79,-1.252
+HRV,Croatia,2023,6.524332,Europe & Central Asia,13.3,0.766
+CYP,Cyprus,2023,6.317472,Europe & Central Asia,-8.21,-0.565
+KAZ,Kazakhstan,2023,17.01328,Europe & Central Asia,-17.1,-3.509
+LIE,Liechtenstein,2023,4.22602,Europe & Central Asia,-21.1,-1.13
+MLT,Malta,2023,4.214103,Europe & Central Asia,-35.66,-2.336
+MCO,Monaco,2023,1.534798,Europe & Central Asia,-34.6,-0.812
+ROU,Romania,2023,5.432569,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2023,14.32121,Europe & Central Asia,4.84,0.662
+SRB,Serbia,2023,9.169923,Europe & Central Asia,20.37,1.552
+UKR,Ukraine,2023,6.171138,Europe & Central Asia,-23.14,-1.858
 AUS,Australia,2017,22.74916,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2017,9.391686,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2017,10.25028,Europe & Central Asia,-17.9,-1.829
@@ -84,45 +84,45 @@ USA,United States,2017,19.71985,North America,,
 DZA,Algeria,2017,5.087825,Middle East & North Africa,,
 ARG,Argentina,2017,7.752652,Latin America & Caribbean,,
 BLR,Belarus,2017,9.421781,Europe & Central Asia,-3.37,-0.333
-BRA,Brazil,2017,5.765045,,,
-BRN,Brunei Darussalam,2017,25.98647,,,
-BGR,Bulgaria,2017,8.421081,,-15.79,-1.252
-CIV,Côte d’Ivoire,2017,1.741144,,,
-HRV,Croatia,2017,6.318025,,13.3,0.766
-CUB,Cuba,2017,4.84334,,,
-CYP,Cyprus,2017,7.117575,,-8.21,-0.565
-EGY,Egypt,2017,3.436196,,,
-GEO,Georgia,2017,4.690071,,,
-GHA,Ghana,2017,1.265825,,,
-GTM,Guatemala,2017,1.852833,,,
-GNB,Guinea-Bissau,2017,0.7177915,,,
-GUY,Guyana,2017,6.172941,,,
-VAT,Holy See,2017,30.69888,,,
-IDN,Indonesia,2017,3.26231,,,
-KAZ,Kazakhstan,2017,20.84414,,-17.1,-3.509
-KEN,Kenya,2017,1.201175,,,
-LIE,Liechtenstein,2017,5.090501,,-21.1,-1.13
-MYS,Malaysia,2017,9.808034,,,
-MDV,Maldives,2017,3.957199,,,
-MLT,Malta,2017,4.311118,,-35.66,-2.336
-MUS,Mauritius,2017,4.435731,,,
-MDA,Moldova,2017,4.155583,,,
-MCO,Monaco,2017,2.212514,,-34.6,-0.812
-NAM,Namibia,2017,4.37755,,,
-NPL,Nepal,2017,1.670359,,,
-NGA,Nigeria,2017,1.497191,,,
-PAN,Panama,2017,4.376703,,,
-PER,Peru,2017,3.230646,,,
-ROU,Romania,2017,5.98312,,-8.16,-0.482
-RUS,Russia,2017,13.67797,,4.84,0.662
-RWA,Rwanda,2017,0.7771127,,,
-SRB,Serbia,2017,9.189626,,20.37,1.552
-SGP,Singapore,2017,10.00177,,,
-SLB,Solomon Islands,2017,0.8774037,,,
-ZAF,South Africa,2017,8.678108,,,
-UKR,Ukraine,2017,7.236908,,-23.14,-1.858
-UZB,Uzbekistan,2017,5.397403,,,
-VEN,Venezuela,2017,7.086742,,,
+BRA,Brazil,2017,5.765045,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2017,25.98647,East Asia & Pacific,,
+BGR,Bulgaria,2017,8.421081,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2017,1.741144,Sub-Saharan Africa,,
+HRV,Croatia,2017,6.318025,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2017,4.84334,Latin America & Caribbean,,
+CYP,Cyprus,2017,7.117575,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2017,3.436196,Middle East & North Africa,,
+GEO,Georgia,2017,4.690071,Europe & Central Asia,,
+GHA,Ghana,2017,1.265825,Sub-Saharan Africa,,
+GTM,Guatemala,2017,1.852833,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2017,0.7177915,Sub-Saharan Africa,,
+GUY,Guyana,2017,6.172941,Latin America & Caribbean,,
+VAT,Holy See,2017,30.69888,Europe & Central Asia,,
+IDN,Indonesia,2017,3.26231,East Asia & Pacific,,
+KAZ,Kazakhstan,2017,20.84414,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2017,1.201175,Sub-Saharan Africa,,
+LIE,Liechtenstein,2017,5.090501,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2017,9.808034,East Asia & Pacific,,
+MDV,Maldives,2017,3.957199,South Asia,,
+MLT,Malta,2017,4.311118,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2017,4.435731,Sub-Saharan Africa,,
+MDA,Moldova,2017,4.155583,Europe & Central Asia,,
+MCO,Monaco,2017,2.212514,Europe & Central Asia,-34.6,-0.812
+NAM,Namibia,2017,4.37755,Sub-Saharan Africa,,
+NPL,Nepal,2017,1.670359,South Asia,,
+NGA,Nigeria,2017,1.497191,Sub-Saharan Africa,,
+PAN,Panama,2017,4.376703,Latin America & Caribbean,,
+PER,Peru,2017,3.230646,Latin America & Caribbean,,
+ROU,Romania,2017,5.98312,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2017,13.67797,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2017,0.7771127,Sub-Saharan Africa,,
+SRB,Serbia,2017,9.189626,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2017,10.00177,East Asia & Pacific,,
+SLB,Solomon Islands,2017,0.8774037,East Asia & Pacific,,
+ZAF,South Africa,2017,8.678108,Sub-Saharan Africa,,
+UKR,Ukraine,2017,7.236908,Europe & Central Asia,-23.14,-1.858
+UZB,Uzbekistan,2017,5.397403,Europe & Central Asia,,
+VEN,Venezuela,2017,7.086742,Latin America & Caribbean,,
 AUS,Australia,2015,22.76201,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2015,9.180776,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2015,10.52475,Europe & Central Asia,-17.9,-1.829
@@ -164,45 +164,45 @@ USA,United States,2015,20.65523,North America,,
 DZA,Algeria,2015,5.177589,Middle East & North Africa,,
 ARG,Argentina,2015,7.907748,Latin America & Caribbean,,
 BLR,Belarus,2015,9.338513,Europe & Central Asia,-3.37,-0.333
-BRA,Brazil,2015,5.898276,,,
-BRN,Brunei Darussalam,2015,26.25471,,,
-BGR,Bulgaria,2015,8.418443,,-15.79,-1.252
-CIV,Côte d’Ivoire,2015,1.878543,,,
-HRV,Croatia,2015,5.916793,,13.3,0.766
-CUB,Cuba,2015,5.264931,,,
-CYP,Cyprus,2015,6.822128,,-8.21,-0.565
-EGY,Egypt,2015,3.355361,,,
-GEO,Georgia,2015,4.87484,,,
-GHA,Ghana,2015,1.141843,,,
-GTM,Guatemala,2015,1.855356,,,
-GNB,Guinea-Bissau,2015,0.7274069,,,
-GUY,Guyana,2015,6.085563,,,
-VAT,Holy See,2015,30.24434,,,
-IDN,Indonesia,2015,3.153344,,,
-KAZ,Kazakhstan,2015,20.38768,,-17.1,-3.509
-KEN,Kenya,2015,1.18458,,,
-LIE,Liechtenstein,2015,5.279607,,-21.1,-1.13
-MYS,Malaysia,2015,10.1734,,,
-MDV,Maldives,2015,3.612897,,,
-MLT,Malta,2015,4.82424,,-35.66,-2.336
-MUS,Mauritius,2015,4.04746,,,
-MDA,Moldova,2015,4.00439,,,
-MCO,Monaco,2015,2.395645,,-34.6,-0.812
-NAM,Namibia,2015,4.74826,,,
-NPL,Nepal,2015,1.539005,,,
-NGA,Nigeria,2015,1.524813,,,
-PAN,Panama,2015,4.493486,,,
-PER,Peru,2015,3.211313,,,
-ROU,Romania,2015,5.878012,,-8.16,-0.482
-RUS,Russia,2015,13.54438,,4.84,0.662
-RWA,Rwanda,2015,0.8212945,,,
-SRB,Serbia,2015,8.753469,,20.37,1.552
-SGP,Singapore,2015,9.832285,,,
-SLB,Solomon Islands,2015,0.8123034,,,
-ZAF,South Africa,2015,9.035033,,,
-UKR,Ukraine,2015,7.093762,,-23.14,-1.858
-UZB,Uzbekistan,2015,5.430871,,,
-VEN,Venezuela,2015,7.611277,,,
+BRA,Brazil,2015,5.898276,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2015,26.25471,East Asia & Pacific,,
+BGR,Bulgaria,2015,8.418443,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2015,1.878543,Sub-Saharan Africa,,
+HRV,Croatia,2015,5.916793,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2015,5.264931,Latin America & Caribbean,,
+CYP,Cyprus,2015,6.822128,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2015,3.355361,Middle East & North Africa,,
+GEO,Georgia,2015,4.87484,Europe & Central Asia,,
+GHA,Ghana,2015,1.141843,Sub-Saharan Africa,,
+GTM,Guatemala,2015,1.855356,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2015,0.7274069,Sub-Saharan Africa,,
+GUY,Guyana,2015,6.085563,Latin America & Caribbean,,
+VAT,Holy See,2015,30.24434,Europe & Central Asia,,
+IDN,Indonesia,2015,3.153344,East Asia & Pacific,,
+KAZ,Kazakhstan,2015,20.38768,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2015,1.18458,Sub-Saharan Africa,,
+LIE,Liechtenstein,2015,5.279607,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2015,10.1734,East Asia & Pacific,,
+MDV,Maldives,2015,3.612897,South Asia,,
+MLT,Malta,2015,4.82424,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2015,4.04746,Sub-Saharan Africa,,
+MDA,Moldova,2015,4.00439,Europe & Central Asia,,
+MCO,Monaco,2015,2.395645,Europe & Central Asia,-34.6,-0.812
+NAM,Namibia,2015,4.74826,Sub-Saharan Africa,,
+NPL,Nepal,2015,1.539005,South Asia,,
+NGA,Nigeria,2015,1.524813,Sub-Saharan Africa,,
+PAN,Panama,2015,4.493486,Latin America & Caribbean,,
+PER,Peru,2015,3.211313,Latin America & Caribbean,,
+ROU,Romania,2015,5.878012,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2015,13.54438,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2015,0.8212945,Sub-Saharan Africa,,
+SRB,Serbia,2015,8.753469,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2015,9.832285,East Asia & Pacific,,
+SLB,Solomon Islands,2015,0.8123034,East Asia & Pacific,,
+ZAF,South Africa,2015,9.035033,Sub-Saharan Africa,,
+UKR,Ukraine,2015,7.093762,Europe & Central Asia,-23.14,-1.858
+UZB,Uzbekistan,2015,5.430871,Europe & Central Asia,,
+VEN,Venezuela,2015,7.611277,Latin America & Caribbean,,
 AUS,Australia,2022,19.98485,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2022,8.110068,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2022,8.845402,Europe & Central Asia,-17.9,-1.829
@@ -244,46 +244,46 @@ ARG,Argentina,2022,7.697249,Latin America & Caribbean,,
 AZE,Azerbaijan,2022,7.256195,Europe & Central Asia,,
 BLR,Belarus,2022,9.631652,Europe & Central Asia,-3.37,-0.333
 BTN,Bhutan,2022,1.790353,East Asia & Pacific,,
-BRA,Brazil,2022,5.865453,,,
-BRN,Brunei Darussalam,2022,29.67097,,,
-BGR,Bulgaria,2022,8.555132,,-15.79,-1.252
-CIV,Côte d’Ivoire,2022,2.695429,,,
-HRV,Croatia,2022,6.276711,,13.3,0.766
-CUB,Cuba,2022,4.466265,,,
-CYP,Cyprus,2022,6.261792,,-8.21,-0.565
-EGY,Egypt,2022,3.429381,,,
-GEO,Georgia,2022,5.296077,,,
-GHA,Ghana,2022,1.446825,,,
-GTM,Guatemala,2022,1.847079,,,
-GNB,Guinea-Bissau,2022,0.7657315,,,
-GUY,Guyana,2022,10.29586,,,
-VAT,Holy See,2022,31.39618,,,
-IDN,Indonesia,2022,3.839404,,,
-KAZ,Kazakhstan,2022,17.19394,,-17.1,-3.509
-KEN,Kenya,2022,1.222736,,,
-LBN,Lebanon,2022,3.571952,,,
-LIE,Liechtenstein,2022,4.195264,,-21.1,-1.13
-MDV,Maldives,2022,4.502358,,,
-MLT,Malta,2022,4.278131,,-35.66,-2.336
-MUS,Mauritius,2022,4.624897,,,
-MDA,Moldova,2022,4.260492,,,
-MCO,Monaco,2022,1.671067,,-34.6,-0.812
-MAR,Morocco,2022,2.655225,,,
-NAM,Namibia,2022,4.355369,,,
-NPL,Nepal,2022,1.959157,,,
-NGA,Nigeria,2022,1.472081,,,
-ROU,Romania,2022,5.721738,,-8.16,-0.482
-RUS,Russia,2022,13.91034,,4.84,0.662
-RWA,Rwanda,2022,0.9296069,,,
-SRB,Serbia,2022,9.226242,,20.37,1.552
-SGP,Singapore,2022,10.36283,,,
-SLB,Solomon Islands,2022,0.7385193,,,
-ZAF,South Africa,2022,7.626128,,,
-THA,Thailand,2022,5.356871,,,
-UKR,Ukraine,2022,5.826824,,-23.14,-1.858
-URY,Uruguay,2022,11.06299,,,
-UZB,Uzbekistan,2022,5.999439,,,
-VEN,Venezuela,2022,5.68212,,,
+BRA,Brazil,2022,5.865453,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2022,29.67097,East Asia & Pacific,,
+BGR,Bulgaria,2022,8.555132,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2022,2.695429,Sub-Saharan Africa,,
+HRV,Croatia,2022,6.276711,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2022,4.466265,Latin America & Caribbean,,
+CYP,Cyprus,2022,6.261792,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2022,3.429381,Middle East & North Africa,,
+GEO,Georgia,2022,5.296077,Europe & Central Asia,,
+GHA,Ghana,2022,1.446825,Sub-Saharan Africa,,
+GTM,Guatemala,2022,1.847079,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2022,0.7657315,Sub-Saharan Africa,,
+GUY,Guyana,2022,10.29586,Latin America & Caribbean,,
+VAT,Holy See,2022,31.39618,Europe & Central Asia,,
+IDN,Indonesia,2022,3.839404,East Asia & Pacific,,
+KAZ,Kazakhstan,2022,17.19394,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2022,1.222736,Sub-Saharan Africa,,
+LBN,Lebanon,2022,3.571952,Middle East & North Africa,,
+LIE,Liechtenstein,2022,4.195264,Europe & Central Asia,-21.1,-1.13
+MDV,Maldives,2022,4.502358,South Asia,,
+MLT,Malta,2022,4.278131,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2022,4.624897,Sub-Saharan Africa,,
+MDA,Moldova,2022,4.260492,Europe & Central Asia,,
+MCO,Monaco,2022,1.671067,Europe & Central Asia,-34.6,-0.812
+MAR,Morocco,2022,2.655225,Middle East & North Africa,,
+NAM,Namibia,2022,4.355369,Sub-Saharan Africa,,
+NPL,Nepal,2022,1.959157,South Asia,,
+NGA,Nigeria,2022,1.472081,Sub-Saharan Africa,,
+ROU,Romania,2022,5.721738,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2022,13.91034,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2022,0.9296069,Sub-Saharan Africa,,
+SRB,Serbia,2022,9.226242,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2022,10.36283,East Asia & Pacific,,
+SLB,Solomon Islands,2022,0.7385193,East Asia & Pacific,,
+ZAF,South Africa,2022,7.626128,Sub-Saharan Africa,,
+THA,Thailand,2022,5.356871,East Asia & Pacific,,
+UKR,Ukraine,2022,5.826824,Europe & Central Asia,-23.14,-1.858
+URY,Uruguay,2022,11.06299,Latin America & Caribbean,,
+UZB,Uzbekistan,2022,5.999439,Europe & Central Asia,,
+VEN,Venezuela,2022,5.68212,Latin America & Caribbean,,
 AUS,Australia,2018,22.44748,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2018,8.984918,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2018,10.26945,Europe & Central Asia,-17.9,-1.829
@@ -325,46 +325,46 @@ USA,United States,2018,20.15406,North America,,
 DZA,Algeria,2018,5.262534,Middle East & North Africa,,
 ARG,Argentina,2018,7.699173,Latin America & Caribbean,,
 BLR,Belarus,2018,9.746824,Europe & Central Asia,-3.37,-0.333
-BRA,Brazil,2018,5.63276,,,
-BRN,Brunei Darussalam,2018,25.09908,,,
-BGR,Bulgaria,2018,7.861728,,-15.79,-1.252
-CIV,Côte d’Ivoire,2018,1.710556,,,
-HRV,Croatia,2018,6.123429,,13.3,0.766
-CUB,Cuba,2018,4.803382,,,
-CYP,Cyprus,2018,6.939748,,-8.21,-0.565
-EGY,Egypt,2018,3.463126,,,
-GEO,Georgia,2018,4.652597,,,
-GHA,Ghana,2018,1.312229,,,
-GTM,Guatemala,2018,1.868301,,,
-GNB,Guinea-Bissau,2018,0.6934381,,,
-GUY,Guyana,2018,6.167833,,,
-VAT,Holy See,2018,29.40696,,,
-IDN,Indonesia,2018,3.378282,,,
-KAZ,Kazakhstan,2018,21.34503,,-17.1,-3.509
-KEN,Kenya,2018,1.223337,,,
-LIE,Liechtenstein,2018,4.732372,,-21.1,-1.13
-MYS,Malaysia,2018,9.79379,,,
-MDV,Maldives,2018,4.197021,,,
-MLT,Malta,2018,4.165486,,-35.66,-2.336
-MUS,Mauritius,2018,4.478291,,,
-MDA,Moldova,2018,4.406259,,,
-MCO,Monaco,2018,2.261659,,-34.6,-0.812
-MAR,Morocco,2018,2.586243,,,
-NAM,Namibia,2018,4.198732,,,
-NPL,Nepal,2018,1.761065,,,
-NGA,Nigeria,2018,1.512795,,,
-PAN,Panama,2018,4.362435,,,
-PER,Peru,2018,3.189103,,,
-ROU,Romania,2018,6.048876,,-8.16,-0.482
-RUS,Russia,2018,14.07665,,4.84,0.662
-RWA,Rwanda,2018,0.7978748,,,
-SRB,Serbia,2018,9.022214,,20.37,1.552
-SGP,Singapore,2018,10.08684,,,
-SLB,Solomon Islands,2018,0.8389294,,,
-ZAF,South Africa,2018,8.537099,,,
-UKR,Ukraine,2018,7.631061,,-23.14,-1.858
-UZB,Uzbekistan,2018,5.80262,,,
-VEN,Venezuela,2018,6.191895,,,
+BRA,Brazil,2018,5.63276,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2018,25.09908,East Asia & Pacific,,
+BGR,Bulgaria,2018,7.861728,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2018,1.710556,Sub-Saharan Africa,,
+HRV,Croatia,2018,6.123429,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2018,4.803382,Latin America & Caribbean,,
+CYP,Cyprus,2018,6.939748,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2018,3.463126,Middle East & North Africa,,
+GEO,Georgia,2018,4.652597,Europe & Central Asia,,
+GHA,Ghana,2018,1.312229,Sub-Saharan Africa,,
+GTM,Guatemala,2018,1.868301,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2018,0.6934381,Sub-Saharan Africa,,
+GUY,Guyana,2018,6.167833,Latin America & Caribbean,,
+VAT,Holy See,2018,29.40696,Europe & Central Asia,,
+IDN,Indonesia,2018,3.378282,East Asia & Pacific,,
+KAZ,Kazakhstan,2018,21.34503,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2018,1.223337,Sub-Saharan Africa,,
+LIE,Liechtenstein,2018,4.732372,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2018,9.79379,East Asia & Pacific,,
+MDV,Maldives,2018,4.197021,South Asia,,
+MLT,Malta,2018,4.165486,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2018,4.478291,Sub-Saharan Africa,,
+MDA,Moldova,2018,4.406259,Europe & Central Asia,,
+MCO,Monaco,2018,2.261659,Europe & Central Asia,-34.6,-0.812
+MAR,Morocco,2018,2.586243,Middle East & North Africa,,
+NAM,Namibia,2018,4.198732,Sub-Saharan Africa,,
+NPL,Nepal,2018,1.761065,South Asia,,
+NGA,Nigeria,2018,1.512795,Sub-Saharan Africa,,
+PAN,Panama,2018,4.362435,Latin America & Caribbean,,
+PER,Peru,2018,3.189103,Latin America & Caribbean,,
+ROU,Romania,2018,6.048876,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2018,14.07665,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2018,0.7978748,Sub-Saharan Africa,,
+SRB,Serbia,2018,9.022214,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2018,10.08684,East Asia & Pacific,,
+SLB,Solomon Islands,2018,0.8389294,East Asia & Pacific,,
+ZAF,South Africa,2018,8.537099,Sub-Saharan Africa,,
+UKR,Ukraine,2018,7.631061,Europe & Central Asia,-23.14,-1.858
+UZB,Uzbekistan,2018,5.80262,Europe & Central Asia,,
+VEN,Venezuela,2018,6.191895,Latin America & Caribbean,,
 AUS,Australia,2014,22.74019,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2014,9.033319,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2014,10.21425,Europe & Central Asia,-17.9,-1.829
@@ -406,46 +406,46 @@ USA,United States,2014,21.37271,North America,,
 DZA,Algeria,2014,5.151576,Middle East & North Africa,,
 ARG,Argentina,2014,7.848993,Latin America & Caribbean,,
 BLR,Belarus,2014,9.893406,Europe & Central Asia,-3.37,-0.333
-BRA,Brazil,2014,6.026185,,,
-BRN,Brunei Darussalam,2014,27.43803,,,
-BGR,Bulgaria,2014,7.927114,,-15.79,-1.252
-CIV,Côte d’Ivoire,2014,1.577156,,,
-HRV,Croatia,2014,5.758433,,13.3,0.766
-CUB,Cuba,2014,5.227796,,,
-CYP,Cyprus,2014,6.882424,,-8.21,-0.565
-EGY,Egypt,2014,3.07912,,,
-GEO,Georgia,2014,4.477543,,,
-GHA,Ghana,2014,1.128611,,,
-GTM,Guatemala,2014,1.703142,,,
-GNB,Guinea-Bissau,2014,0.6962806,,,
-GUY,Guyana,2014,6.078437,,,
-VAT,Holy See,2014,30.32221,,,
-IDN,Indonesia,2014,3.069394,,,
-KAZ,Kazakhstan,2014,20.52191,,-17.1,-3.509
-KEN,Kenya,2014,1.147807,,,
-LIE,Liechtenstein,2014,5.356115,,-21.1,-1.13
-MYS,Malaysia,2014,10.23582,,,
-MDV,Maldives,2014,3.68893,,,
-MLT,Malta,2014,6.549833,,-35.66,-2.336
-MUS,Mauritius,2014,4.015156,,,
-MDA,Moldova,2014,3.968441,,,
-MCO,Monaco,2014,2.346737,,-34.6,-0.812
-MAR,Morocco,2014,2.459603,,,
-NAM,Namibia,2014,4.751163,,,
-NPL,Nepal,2014,1.496792,,,
-NGA,Nigeria,2014,1.563994,,,
-PAN,Panama,2014,4.204799,,,
-PER,Peru,2014,3.223498,,,
-ROU,Romania,2014,5.914941,,-8.16,-0.482
-RUS,Russia,2014,13.6596,,4.84,0.662
-RWA,Rwanda,2014,0.7338822,,,
-SRB,Serbia,2014,7.617867,,20.37,1.552
-SGP,Singapore,2014,9.636294,,,
-SLB,Solomon Islands,2014,0.8533567,,,
-ZAF,South Africa,2014,9.387836,,,
-UKR,Ukraine,2014,8.028714,,-23.14,-1.858
-UZB,Uzbekistan,2014,5.650603,,,
-VEN,Venezuela,2014,8.367807,,,
+BRA,Brazil,2014,6.026185,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2014,27.43803,East Asia & Pacific,,
+BGR,Bulgaria,2014,7.927114,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2014,1.577156,Sub-Saharan Africa,,
+HRV,Croatia,2014,5.758433,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2014,5.227796,Latin America & Caribbean,,
+CYP,Cyprus,2014,6.882424,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2014,3.07912,Middle East & North Africa,,
+GEO,Georgia,2014,4.477543,Europe & Central Asia,,
+GHA,Ghana,2014,1.128611,Sub-Saharan Africa,,
+GTM,Guatemala,2014,1.703142,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2014,0.6962806,Sub-Saharan Africa,,
+GUY,Guyana,2014,6.078437,Latin America & Caribbean,,
+VAT,Holy See,2014,30.32221,Europe & Central Asia,,
+IDN,Indonesia,2014,3.069394,East Asia & Pacific,,
+KAZ,Kazakhstan,2014,20.52191,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2014,1.147807,Sub-Saharan Africa,,
+LIE,Liechtenstein,2014,5.356115,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2014,10.23582,East Asia & Pacific,,
+MDV,Maldives,2014,3.68893,South Asia,,
+MLT,Malta,2014,6.549833,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2014,4.015156,Sub-Saharan Africa,,
+MDA,Moldova,2014,3.968441,Europe & Central Asia,,
+MCO,Monaco,2014,2.346737,Europe & Central Asia,-34.6,-0.812
+MAR,Morocco,2014,2.459603,Middle East & North Africa,,
+NAM,Namibia,2014,4.751163,Sub-Saharan Africa,,
+NPL,Nepal,2014,1.496792,South Asia,,
+NGA,Nigeria,2014,1.563994,Sub-Saharan Africa,,
+PAN,Panama,2014,4.204799,Latin America & Caribbean,,
+PER,Peru,2014,3.223498,Latin America & Caribbean,,
+ROU,Romania,2014,5.914941,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2014,13.6596,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2014,0.7338822,Sub-Saharan Africa,,
+SRB,Serbia,2014,7.617867,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2014,9.636294,East Asia & Pacific,,
+SLB,Solomon Islands,2014,0.8533567,East Asia & Pacific,,
+ZAF,South Africa,2014,9.387836,Sub-Saharan Africa,,
+UKR,Ukraine,2014,8.028714,Europe & Central Asia,-23.14,-1.858
+UZB,Uzbekistan,2014,5.650603,Europe & Central Asia,,
+VEN,Venezuela,2014,8.367807,Latin America & Caribbean,,
 AUS,Australia,2019,21.86902,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2019,9.08026,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2019,10.12343,Europe & Central Asia,-17.9,-1.829
@@ -488,46 +488,46 @@ DZA,Algeria,2019,5.287959,Middle East & North Africa,,
 ARG,Argentina,2019,7.473238,Latin America & Caribbean,,
 BLR,Belarus,2019,9.808526,Europe & Central Asia,-3.37,-0.333
 BTN,Bhutan,2019,1.872337,East Asia & Pacific,,
-BRA,Brazil,2019,5.59519,,,
-BRN,Brunei Darussalam,2019,25.95554,,,
-BGR,Bulgaria,2019,7.72982,,-15.79,-1.252
-CIV,Côte d’Ivoire,2019,1.682472,,,
-HRV,Croatia,2019,6.225204,,13.3,0.766
-CUB,Cuba,2019,4.692558,,,
-CYP,Cyprus,2019,6.542007,,-8.21,-0.565
-EGY,Egypt,2019,3.204049,,,
-GEO,Georgia,2019,4.74158,,,
-GHA,Ghana,2019,1.366898,,,
-GTM,Guatemala,2019,1.882364,,,
-GNB,Guinea-Bissau,2019,0.7790754,,,
-GUY,Guyana,2019,6.561252,,,
-VAT,Holy See,2019,29.66224,,,
-IDN,Indonesia,2019,3.556219,,,
-KAZ,Kazakhstan,2019,19.34913,,-17.1,-3.509
-KEN,Kenya,2019,1.286968,,,
-LIE,Liechtenstein,2019,4.868305,,-21.1,-1.13
-MYS,Malaysia,2019,9.942006,,,
-MDV,Maldives,2019,4.476469,,,
-MLT,Malta,2019,4.219994,,-35.66,-2.336
-MUS,Mauritius,2019,4.57325,,,
-MDA,Moldova,2019,4.370677,,,
-MCO,Monaco,2019,2.157267,,-34.6,-0.812
-NAM,Namibia,2019,3.983455,,,
-NPL,Nepal,2019,1.853793,,,
-NGA,Nigeria,2019,1.519398,,,
-PAN,Panama,2019,5.162121,,,
-PER,Peru,2019,3.26907,,,
-ROU,Romania,2019,5.912965,,-8.16,-0.482
-RUS,Russia,2019,13.99041,,4.84,0.662
-RWA,Rwanda,2019,0.8924332,,,
-SAU,Saudi Arabia,2019,22.00738,,,
-SRB,Serbia,2019,8.99412,,20.37,1.552
-SGP,Singapore,2019,9.800837,,,
-SLB,Solomon Islands,2019,0.8503432,,,
-ZAF,South Africa,2019,8.34868,,,
-UKR,Ukraine,2019,7.569845,,-23.14,-1.858
-UZB,Uzbekistan,2019,5.712653,,,
-VEN,Venezuela,2019,5.560651,,,
+BRA,Brazil,2019,5.59519,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2019,25.95554,East Asia & Pacific,,
+BGR,Bulgaria,2019,7.72982,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2019,1.682472,Sub-Saharan Africa,,
+HRV,Croatia,2019,6.225204,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2019,4.692558,Latin America & Caribbean,,
+CYP,Cyprus,2019,6.542007,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2019,3.204049,Middle East & North Africa,,
+GEO,Georgia,2019,4.74158,Europe & Central Asia,,
+GHA,Ghana,2019,1.366898,Sub-Saharan Africa,,
+GTM,Guatemala,2019,1.882364,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2019,0.7790754,Sub-Saharan Africa,,
+GUY,Guyana,2019,6.561252,Latin America & Caribbean,,
+VAT,Holy See,2019,29.66224,Europe & Central Asia,,
+IDN,Indonesia,2019,3.556219,East Asia & Pacific,,
+KAZ,Kazakhstan,2019,19.34913,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2019,1.286968,Sub-Saharan Africa,,
+LIE,Liechtenstein,2019,4.868305,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2019,9.942006,East Asia & Pacific,,
+MDV,Maldives,2019,4.476469,South Asia,,
+MLT,Malta,2019,4.219994,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2019,4.57325,Sub-Saharan Africa,,
+MDA,Moldova,2019,4.370677,Europe & Central Asia,,
+MCO,Monaco,2019,2.157267,Europe & Central Asia,-34.6,-0.812
+NAM,Namibia,2019,3.983455,Sub-Saharan Africa,,
+NPL,Nepal,2019,1.853793,South Asia,,
+NGA,Nigeria,2019,1.519398,Sub-Saharan Africa,,
+PAN,Panama,2019,5.162121,Latin America & Caribbean,,
+PER,Peru,2019,3.26907,Latin America & Caribbean,,
+ROU,Romania,2019,5.912965,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2019,13.99041,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2019,0.8924332,Sub-Saharan Africa,,
+SAU,Saudi Arabia,2019,22.00738,Middle East & North Africa,,
+SRB,Serbia,2019,8.99412,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2019,9.800837,East Asia & Pacific,,
+SLB,Solomon Islands,2019,0.8503432,East Asia & Pacific,,
+ZAF,South Africa,2019,8.34868,Sub-Saharan Africa,,
+UKR,Ukraine,2019,7.569845,Europe & Central Asia,-23.14,-1.858
+UZB,Uzbekistan,2019,5.712653,Europe & Central Asia,,
+VEN,Venezuela,2019,5.560651,Latin America & Caribbean,,
 AUS,Australia,2016,22.74003,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2016,9.192056,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2016,10.34431,Europe & Central Asia,-17.9,-1.829
@@ -569,47 +569,47 @@ USA,United States,2016,19.98921,North America,,
 DZA,Algeria,2016,5.054544,Middle East & North Africa,,
 ARG,Argentina,2016,7.859378,Latin America & Caribbean,,
 BLR,Belarus,2016,9.244925,Europe & Central Asia,-3.37,-0.333
-BRA,Brazil,2016,5.744674,,,
-BRN,Brunei Darussalam,2016,27.08624,,,
-BGR,Bulgaria,2016,8.108453,,-15.79,-1.252
-CIV,Côte d’Ivoire,2016,1.795058,,,
-HRV,Croatia,2016,6.025329,,13.3,0.766
-CUB,Cuba,2016,5.114254,,,
-CYP,Cyprus,2016,7.082761,,-8.21,-0.565
-EGY,Egypt,2016,3.422747,,,
-GEO,Georgia,2016,4.921393,,,
-GHA,Ghana,2016,1.189614,,,
-GTM,Guatemala,2016,1.926159,,,
-GNB,Guinea-Bissau,2016,0.7221428,,,
-GUY,Guyana,2016,6.111522,,,
-VAT,Holy See,2016,29.30915,,,
-IND,India,2016,2.198557,,,
-IDN,Indonesia,2016,3.093477,,,
-KAZ,Kazakhstan,2016,20.0808,,-17.1,-3.509
-KEN,Kenya,2016,1.255773,,,
-LIE,Liechtenstein,2016,4.973462,,-21.1,-1.13
-MYS,Malaysia,2016,10.00872,,,
-MDV,Maldives,2016,3.767199,,,
-MLT,Malta,2016,4.067336,,-35.66,-2.336
-MUS,Mauritius,2016,4.154706,,,
-MDA,Moldova,2016,4.138269,,,
-MCO,Monaco,2016,2.329862,,-34.6,-0.812
-MAR,Morocco,2016,2.473351,,,
-NAM,Namibia,2016,5.007187,,,
-NPL,Nepal,2016,1.544541,,,
-NGA,Nigeria,2016,1.523554,,,
-PAN,Panama,2016,4.467756,,,
-PER,Peru,2016,3.269104,,,
-ROU,Romania,2016,5.806685,,-8.16,-0.482
-RUS,Russia,2016,13.45777,,4.84,0.662
-RWA,Rwanda,2016,0.7621484,,,
-SRB,Serbia,2016,9.027099,,20.37,1.552
-SGP,Singapore,2016,9.712685,,,
-SLB,Solomon Islands,2016,0.9021343,,,
-ZAF,South Africa,2016,8.87429,,,
-UKR,Ukraine,2016,7.525199,,-23.14,-1.858
-UZB,Uzbekistan,2016,5.477135,,,
-VEN,Venezuela,2016,7.393056,,,
+BRA,Brazil,2016,5.744674,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2016,27.08624,East Asia & Pacific,,
+BGR,Bulgaria,2016,8.108453,Europe & Central Asia,-15.79,-1.252
+CIV,Côte d’Ivoire,2016,1.795058,Sub-Saharan Africa,,
+HRV,Croatia,2016,6.025329,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2016,5.114254,Latin America & Caribbean,,
+CYP,Cyprus,2016,7.082761,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2016,3.422747,Middle East & North Africa,,
+GEO,Georgia,2016,4.921393,Europe & Central Asia,,
+GHA,Ghana,2016,1.189614,Sub-Saharan Africa,,
+GTM,Guatemala,2016,1.926159,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2016,0.7221428,Sub-Saharan Africa,,
+GUY,Guyana,2016,6.111522,Latin America & Caribbean,,
+VAT,Holy See,2016,29.30915,Europe & Central Asia,,
+IND,India,2016,2.198557,South Asia,,
+IDN,Indonesia,2016,3.093477,East Asia & Pacific,,
+KAZ,Kazakhstan,2016,20.0808,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2016,1.255773,Sub-Saharan Africa,,
+LIE,Liechtenstein,2016,4.973462,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2016,10.00872,East Asia & Pacific,,
+MDV,Maldives,2016,3.767199,South Asia,,
+MLT,Malta,2016,4.067336,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2016,4.154706,Sub-Saharan Africa,,
+MDA,Moldova,2016,4.138269,Europe & Central Asia,,
+MCO,Monaco,2016,2.329862,Europe & Central Asia,-34.6,-0.812
+MAR,Morocco,2016,2.473351,Middle East & North Africa,,
+NAM,Namibia,2016,5.007187,Sub-Saharan Africa,,
+NPL,Nepal,2016,1.544541,South Asia,,
+NGA,Nigeria,2016,1.523554,Sub-Saharan Africa,,
+PAN,Panama,2016,4.467756,Latin America & Caribbean,,
+PER,Peru,2016,3.269104,Latin America & Caribbean,,
+ROU,Romania,2016,5.806685,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2016,13.45777,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2016,0.7621484,Sub-Saharan Africa,,
+SRB,Serbia,2016,9.027099,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2016,9.712685,East Asia & Pacific,,
+SLB,Solomon Islands,2016,0.9021343,East Asia & Pacific,,
+ZAF,South Africa,2016,8.87429,Sub-Saharan Africa,,
+UKR,Ukraine,2016,7.525199,Europe & Central Asia,-23.14,-1.858
+UZB,Uzbekistan,2016,5.477135,Europe & Central Asia,,
+VEN,Venezuela,2016,7.393056,Latin America & Caribbean,,
 AUS,Australia,2021,20.40214,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2021,8.706675,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2021,9.486282,Europe & Central Asia,-17.9,-1.829
@@ -653,52 +653,52 @@ ARG,Argentina,2021,7.557831,Latin America & Caribbean,,
 AZE,Azerbaijan,2021,7.010887,Europe & Central Asia,,
 BLR,Belarus,2021,9.960464,Europe & Central Asia,-3.37,-0.333
 BTN,Bhutan,2021,1.905872,East Asia & Pacific,,
-BRA,Brazil,2021,5.888017,,,
-BRN,Brunei Darussalam,2021,33.40891,,,
-BGR,Bulgaria,2021,7.856872,,-15.79,-1.252
-CHN,China (People’s Republic of),2021,10.03497,,,
-CIV,Côte d’Ivoire,2021,2.909439,,,
-HRV,Croatia,2021,6.224454,,13.3,0.766
-CUB,Cuba,2021,4.437665,,,
-CYP,Cyprus,2021,6.207363,,-8.21,-0.565
-EGY,Egypt,2021,3.278952,,,
-GEO,Georgia,2021,4.943908,,,
-GHA,Ghana,2021,1.443062,,,
-GTM,Guatemala,2021,1.93884,,,
-GNB,Guinea-Bissau,2021,0.753656,,,
-GUY,Guyana,2021,7.857966,,,
-VAT,Holy See,2021,29.63985,,,
-IDN,Indonesia,2021,3.461016,,,
-IRQ,Iraq,2021,4.728294,,,
-KAZ,Kazakhstan,2021,16.20224,,-17.1,-3.509
-KEN,Kenya,2021,1.300705,,,
-LBN,Lebanon,2021,3.716709,,,
-LIE,Liechtenstein,2021,4.678162,,-21.1,-1.13
-MYS,Malaysia,2021,9.595771,,,
-MDV,Maldives,2021,4.390248,,,
-MLT,Malta,2021,4.005686,,-35.66,-2.336
-MUS,Mauritius,2021,4.510886,,,
-MDA,Moldova,2021,4.831095,,,
-MCO,Monaco,2021,1.892956,,-34.6,-0.812
-MAR,Morocco,2021,2.734579,,,
-NAM,Namibia,2021,3.76657,,,
-NPL,Nepal,2021,1.944893,,,
-NGA,Nigeria,2021,1.471587,,,
-PAN,Panama,2021,4.722124,,,
-PER,Peru,2021,3.320794,,,
-ROU,Romania,2021,5.994079,,-8.16,-0.482
-RUS,Russia,2021,13.91481,,4.84,0.662
-RWA,Rwanda,2021,0.8892792,,,
-SAU,Saudi Arabia,2021,22.85849,,,
-SRB,Serbia,2021,9.060741,,20.37,1.552
-SGP,Singapore,2021,10.50314,,,
-SLB,Solomon Islands,2021,0.8096753,,,
-ZAF,South Africa,2021,7.89189,,,
-THA,Thailand,2021,5.099677,,,
-UKR,Ukraine,2021,7.529293,,-23.14,-1.858
-URY,Uruguay,2021,11.52196,,,
-UZB,Uzbekistan,2021,6.196108,,,
-VEN,Venezuela,2021,7.581178,,,
+BRA,Brazil,2021,5.888017,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2021,33.40891,East Asia & Pacific,,
+BGR,Bulgaria,2021,7.856872,Europe & Central Asia,-15.79,-1.252
+CHN,China (People’s Republic of),2021,10.03497,East Asia & Pacific,,
+CIV,Côte d’Ivoire,2021,2.909439,Sub-Saharan Africa,,
+HRV,Croatia,2021,6.224454,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2021,4.437665,Latin America & Caribbean,,
+CYP,Cyprus,2021,6.207363,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2021,3.278952,Middle East & North Africa,,
+GEO,Georgia,2021,4.943908,Europe & Central Asia,,
+GHA,Ghana,2021,1.443062,Sub-Saharan Africa,,
+GTM,Guatemala,2021,1.93884,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2021,0.753656,Sub-Saharan Africa,,
+GUY,Guyana,2021,7.857966,Latin America & Caribbean,,
+VAT,Holy See,2021,29.63985,Europe & Central Asia,,
+IDN,Indonesia,2021,3.461016,East Asia & Pacific,,
+IRQ,Iraq,2021,4.728294,Middle East & North Africa,,
+KAZ,Kazakhstan,2021,16.20224,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2021,1.300705,Sub-Saharan Africa,,
+LBN,Lebanon,2021,3.716709,Middle East & North Africa,,
+LIE,Liechtenstein,2021,4.678162,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2021,9.595771,East Asia & Pacific,,
+MDV,Maldives,2021,4.390248,South Asia,,
+MLT,Malta,2021,4.005686,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2021,4.510886,Sub-Saharan Africa,,
+MDA,Moldova,2021,4.831095,Europe & Central Asia,,
+MCO,Monaco,2021,1.892956,Europe & Central Asia,-34.6,-0.812
+MAR,Morocco,2021,2.734579,Middle East & North Africa,,
+NAM,Namibia,2021,3.76657,Sub-Saharan Africa,,
+NPL,Nepal,2021,1.944893,South Asia,,
+NGA,Nigeria,2021,1.471587,Sub-Saharan Africa,,
+PAN,Panama,2021,4.722124,Latin America & Caribbean,,
+PER,Peru,2021,3.320794,Latin America & Caribbean,,
+ROU,Romania,2021,5.994079,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2021,13.91481,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2021,0.8892792,Sub-Saharan Africa,,
+SAU,Saudi Arabia,2021,22.85849,Middle East & North Africa,,
+SRB,Serbia,2021,9.060741,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2021,10.50314,East Asia & Pacific,,
+SLB,Solomon Islands,2021,0.8096753,East Asia & Pacific,,
+ZAF,South Africa,2021,7.89189,Sub-Saharan Africa,,
+THA,Thailand,2021,5.099677,East Asia & Pacific,,
+UKR,Ukraine,2021,7.529293,Europe & Central Asia,-23.14,-1.858
+URY,Uruguay,2021,11.52196,Latin America & Caribbean,,
+UZB,Uzbekistan,2021,6.196108,Europe & Central Asia,,
+VEN,Venezuela,2021,7.581178,Latin America & Caribbean,,
 AUS,Australia,2020,20.91176,East Asia & Pacific,-12.36,-2.811
 AUT,Austria,2020,8.370743,Europe & Central Asia,-16.71,-1.509
 BEL,Belgium,2020,9.26923,Europe & Central Asia,-17.9,-1.829
@@ -742,49 +742,49 @@ ARG,Argentina,2020,7.061831,Latin America & Caribbean,,
 AZE,Azerbaijan,2020,6.580966,Europe & Central Asia,,
 BLR,Belarus,2020,9.635014,Europe & Central Asia,-3.37,-0.333
 BTN,Bhutan,2020,1.910724,East Asia & Pacific,,
-BRA,Brazil,2020,5.557711,,,
-BRN,Brunei Darussalam,2020,33.77179,,,
-BGR,Bulgaria,2020,6.911945,,-15.79,-1.252
-CHN,China (People’s Republic of),2020,9.652851,,,
-CIV,Côte d’Ivoire,2020,1.659335,,,
-HRV,Croatia,2020,6.044096,,13.3,0.766
-CUB,Cuba,2020,4.470159,,,
-CYP,Cyprus,2020,6.190146,,-8.21,-0.565
-EGY,Egypt,2020,3.088697,,,
-GEO,Georgia,2020,4.820012,,,
-GHA,Ghana,2020,1.468394,,,
-GTM,Guatemala,2020,1.778021,,,
-GNB,Guinea-Bissau,2020,0.7595775,,,
-GUY,Guyana,2020,9.162369,,,
-VAT,Holy See,2020,30.21183,,,
-IDN,Indonesia,2020,3.339661,,,
-IRQ,Iraq,2020,4.717297,,,
-KAZ,Kazakhstan,2020,18.43434,,-17.1,-3.509
-KEN,Kenya,2020,1.295409,,,
-LBN,Lebanon,2020,4.437867,,,
-LIE,Liechtenstein,2020,4.631047,,-21.1,-1.13
-MYS,Malaysia,2020,9.816118,,,
-MDV,Maldives,2020,3.009546,,,
-MLT,Malta,2020,4.025918,,-35.66,-2.336
-MUS,Mauritius,2020,4.344573,,,
-MDA,Moldova,2020,4.363438,,,
-MCO,Monaco,2020,1.804676,,-34.6,-0.812
-MAR,Morocco,2020,2.56891,,,
-NAM,Namibia,2020,3.381342,,,
-NPL,Nepal,2020,1.803851,,,
-NGA,Nigeria,2020,1.452109,,,
-PAN,Panama,2020,4.221086,,,
-PER,Peru,2020,2.868927,,,
-ROU,Romania,2020,5.750749,,-8.16,-0.482
-RUS,Russia,2020,13.49968,,4.84,0.662
-RWA,Rwanda,2020,0.8529792,,,
-SAU,Saudi Arabia,2020,22.25867,,,
-SRB,Serbia,2020,9.235191,,20.37,1.552
-SGP,Singapore,2020,9.581285,,,
-SLB,Solomon Islands,2020,0.8599326,,,
-ZAF,South Africa,2020,7.756462,,,
-THA,Thailand,2020,5.205036,,,
-UKR,Ukraine,2020,7.278898,,-23.14,-1.858
-URY,Uruguay,2020,10.70697,,,
-UZB,Uzbekistan,2020,5.595903,,,
-VEN,Venezuela,2020,7.609905,,,
+BRA,Brazil,2020,5.557711,Latin America & Caribbean,,
+BRN,Brunei Darussalam,2020,33.77179,East Asia & Pacific,,
+BGR,Bulgaria,2020,6.911945,Europe & Central Asia,-15.79,-1.252
+CHN,China (People’s Republic of),2020,9.652851,East Asia & Pacific,,
+CIV,Côte d’Ivoire,2020,1.659335,Sub-Saharan Africa,,
+HRV,Croatia,2020,6.044096,Europe & Central Asia,13.3,0.766
+CUB,Cuba,2020,4.470159,Latin America & Caribbean,,
+CYP,Cyprus,2020,6.190146,Europe & Central Asia,-8.21,-0.565
+EGY,Egypt,2020,3.088697,Middle East & North Africa,,
+GEO,Georgia,2020,4.820012,Europe & Central Asia,,
+GHA,Ghana,2020,1.468394,Sub-Saharan Africa,,
+GTM,Guatemala,2020,1.778021,Latin America & Caribbean,,
+GNB,Guinea-Bissau,2020,0.7595775,Sub-Saharan Africa,,
+GUY,Guyana,2020,9.162369,Latin America & Caribbean,,
+VAT,Holy See,2020,30.21183,Europe & Central Asia,,
+IDN,Indonesia,2020,3.339661,East Asia & Pacific,,
+IRQ,Iraq,2020,4.717297,Middle East & North Africa,,
+KAZ,Kazakhstan,2020,18.43434,Europe & Central Asia,-17.1,-3.509
+KEN,Kenya,2020,1.295409,Sub-Saharan Africa,,
+LBN,Lebanon,2020,4.437867,Middle East & North Africa,,
+LIE,Liechtenstein,2020,4.631047,Europe & Central Asia,-21.1,-1.13
+MYS,Malaysia,2020,9.816118,East Asia & Pacific,,
+MDV,Maldives,2020,3.009546,South Asia,,
+MLT,Malta,2020,4.025918,Europe & Central Asia,-35.66,-2.336
+MUS,Mauritius,2020,4.344573,Sub-Saharan Africa,,
+MDA,Moldova,2020,4.363438,Europe & Central Asia,,
+MCO,Monaco,2020,1.804676,Europe & Central Asia,-34.6,-0.812
+MAR,Morocco,2020,2.56891,Middle East & North Africa,,
+NAM,Namibia,2020,3.381342,Sub-Saharan Africa,,
+NPL,Nepal,2020,1.803851,South Asia,,
+NGA,Nigeria,2020,1.452109,Sub-Saharan Africa,,
+PAN,Panama,2020,4.221086,Latin America & Caribbean,,
+PER,Peru,2020,2.868927,Latin America & Caribbean,,
+ROU,Romania,2020,5.750749,Europe & Central Asia,-8.16,-0.482
+RUS,Russia,2020,13.49968,Europe & Central Asia,4.84,0.662
+RWA,Rwanda,2020,0.8529792,Sub-Saharan Africa,,
+SAU,Saudi Arabia,2020,22.25867,Middle East & North Africa,,
+SRB,Serbia,2020,9.235191,Europe & Central Asia,20.37,1.552
+SGP,Singapore,2020,9.581285,East Asia & Pacific,,
+SLB,Solomon Islands,2020,0.8599326,East Asia & Pacific,,
+ZAF,South Africa,2020,7.756462,Sub-Saharan Africa,,
+THA,Thailand,2020,5.205036,East Asia & Pacific,,
+UKR,Ukraine,2020,7.278898,Europe & Central Asia,-23.14,-1.858
+URY,Uruguay,2020,10.70697,Latin America & Caribbean,,
+UZB,Uzbekistan,2020,5.595903,Europe & Central Asia,,
+VEN,Venezuela,2020,7.609905,Latin America & Caribbean,,
