@@ -89,9 +89,34 @@ meta_cols = ["Country Name", "Country Code", "Year"]
 indicator_cols = [c for c in df_wide.columns if c not in meta_cols]
 df_wide = df_wide.rename(columns={c: f"average_value_{c}" for c in indicator_cols})
 
-# STEP 6: Sort & save 
+# STEP 6: Sort & save
 df_wide = df_wide.sort_values(["Country Code", "Year"]).reset_index(drop=True)
 
 df_wide.to_csv(OUTPUT_FILE, index=False)
 
 
+# ---------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------
+
+INPUT_FILE  = "data/WB_WDI_SP_POP_TOTL.csv"
+OUTPUT_FILE = "data/population-2025.csv"
+
+# STEP 1: Load — already in long format (one row per country-year)
+pop_raw = pd.read_csv(INPUT_FILE)
+
+# STEP 2: Extract and rename the three relevant columns
+pop = (
+    pop_raw[['REF_AREA', 'TIME_PERIOD', 'OBS_VALUE']]
+    .rename(columns={
+        'REF_AREA':    'iso3',
+        'TIME_PERIOD': 'year',
+        'OBS_VALUE':   'population'
+    })
+    .dropna(subset=['population'])
+)
+pop['year']       = pop['year'].astype(int)
+pop['population'] = pop['population'].astype(float)
+
+# STEP 3: Sort & save
+pop = pop.sort_values(['iso3', 'year']).reset_index(drop=True)
+pop.to_csv(OUTPUT_FILE, index=False)
