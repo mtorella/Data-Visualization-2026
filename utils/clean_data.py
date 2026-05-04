@@ -44,7 +44,8 @@ df_wide = df_wide.sort_values(["Country Code", "Year"]).reset_index(drop=True)
 
 df_wide.to_csv(OUTPUT_FILE, index=False)
 
-# ---
+# ---------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------
 
 INPUT_FILE  = "data/API_3_DS2_en_csv_v2_17489.csv"
 OUTPUT_FILE = "data/economy-and-growth-2025.csv"
@@ -92,4 +93,5 @@ df_wide = df_wide.rename(columns={c: f"average_value_{c}" for c in indicator_col
 df_wide = df_wide.sort_values(["Country Code", "Year"]).reset_index(drop=True)
 
 df_wide.to_csv(OUTPUT_FILE, index=False)
+
 
