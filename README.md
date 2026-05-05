@@ -7,14 +7,19 @@
 
 ```
 Data-Visualisation-2026/
-├── data/                        # Raw source files (not modified)
-│   ├── OECD.csv                 # OECD GHG emissions per capita
-│   ├── economy-and-growth-2025.csv   # World Bank GDP data
-│   ├── energy-and-mining-2025.csv    # World Bank energy indicators
-│   └── population-2025.csv          # World Bank total population
-├── preprocessing.ipynb          # Main pipeline: cleaning, joining, EDA
-├── df_panel.csv                 # Output: full joined panel (2014–2023)
-├── df_slope.csv                 # Output: country endpoints for slope chart
+├── data/                              # Raw source files (not modified)
+│   ├── OECD.csv                       # OECD GHG emissions per capita
+│   ├── API_5_DS2_en_csv_v2_5693.csv   # World Bank raw export — energy & mining
+│   ├── API_3_DS2_en_csv_v2_17489.csv  # World Bank raw export — economy & growth
+│   ├── WB_WDI_SP_POP_TOTL.csv         # World Bank raw export — population
+│   ├── energy-and-mining-2025.csv     # Cleaned energy data (output of clean_data.py)
+│   ├── economy-and-growth-2025.csv    # Cleaned economy data (output of clean_data.py)
+│   └── population-2025.csv           # Cleaned population data (output of clean_data.py)
+├── utils/
+│   └── clean_data.py                  # Converts raw World Bank exports to analysis-ready CSVs
+├── preprocessing.ipynb                # Main pipeline: cleaning, joining, EDA
+├── df_panel.csv                       # Output: full joined panel (2014–2023)
+├── df_slope.csv                       # Output: country endpoints for slope chart
 └── README.md
 ```
 
@@ -29,6 +34,28 @@ pip install pandas numpy matplotlib seaborn
 ```
 
 No internet connection is required: all data files are bundled locally in `data/`.
+
+---
+
+## Utils
+
+The `utils/clean_data.py` script handles the conversion of raw World Bank API exports into the analysis-ready CSVs consumed by the notebook. The World Bank exports data in a wide format with 4 header rows and one column per year; the script reshapes each file into a long-then-wide tidy format with one row per country-year and one column per indicator.
+
+It processes three files in sequence:
+
+| Input (raw) | Output (cleaned) |
+|---|---|
+| `data/API_5_DS2_en_csv_v2_5693.csv` | `data/energy-and-mining-2025.csv` |
+| `data/API_3_DS2_en_csv_v2_17489.csv` | `data/economy-and-growth-2025.csv` |
+| `data/WB_WDI_SP_POP_TOTL.csv` | `data/population-2025.csv` |
+
+**You only need to run this script if you have re-downloaded the raw World Bank files.** The cleaned CSVs are already included in the repository. To re-run it:
+
+```bash
+python utils/clean_data.py
+```
+
+Run it from the project root before opening the notebook.
 
 ---
 
