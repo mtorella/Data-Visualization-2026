@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climate Passport Wall</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Viz 12 / D3.js / Creative Option 2</p>
+          <h1>Climate Passport Wall</h1>
+          <p class="lede">Each country becomes a passport-style identity card. Instead of plotting dots, this view asks what kind of energy identity each country carries in a given year.</p>
+        </div>
+        <form class="controls">
+          <label class="field">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+          <label class="field">
+            <span>Sort By</span>
+            <select id="sort-select">
+              <option value="story">Narrative group</option>
+              <option value="ghg">GHG per capita</option>
+              <option value="renewable">Renewable share</option>
+              <option value="access">Electricity access</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Region Filter</span>
+            <select id="region-select"></select>
+          </label>
+        </form>
+      </section>
+
+      <section class="layout">
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Identity cards, not data points</p>
+              <h2>Who looks green by transition, and who only looks light because demand stays low?</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="wall" class="wall"></div>
+        </article>
+
+        <aside class="card sidebar">
+          <h2>Compare Two Passports</h2>
+          <p>Click two cards to pin them side by side. The comparison is the interactive feature here: it turns countries into competing identity documents rather than anonymous marks.</p>
+          <div id="compare" class="compare"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Tightrope</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Viz 13 / D3.js / Creative Option 3</p>
+          <h1>Carbon Tightrope</h1>
+          <p class="lede">Countries balance between two interpretations: low carbon by necessity on one side, lower carbon through transition on the other. The rope becomes a moral spectrum.</p>
+        </div>
+        <form class="controls">
+          <label class="field">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+          <label class="field">
+            <span>Lens</span>
+            <input id="lens-slider" type="range" min="0" max="100" value="52">
+          </label>
+          <label class="field">
+            <span>Focus Country</span>
+            <select id="country-select"></select>
+          </label>
+          <p id="lens-note" class="lens-note"></p>
+        </form>
+      </section>
+
+      <section class="layout">
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Balancing act</p>
+              <h2>Where each country lands on the rope changes with the lens</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="chart" class="chart"></div>
+        </article>
+
+        <aside class="card sidebar">
+          <h2>How to read</h2>
+          <p>Left means low emissions are more plausibly read as limited access or capacity. Right means lower emissions are better supported by renewable and development conditions.</p>
+          <p>The amount a walker hangs below the rope reflects carbon pressure per person. Bigger walkers have larger total emissions.</p>
+          <div id="detail" class="detail"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Energy Constellation | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Viz 10 / D3.js / Creative Visualisation</p>
+          <h1 id="page-title">Energy Constellation</h1>
+          <p class="lede">
+            A night sky of countries where low-carbon futures split into different meanings:
+            some stars shine lightly because they are transitioning, while others stay dim because
+            access and capacity remain limited.
+          </p>
+        </div>
+
+        <form class="controls" aria-label="Constellation controls">
+          <label class="field" for="year-select">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+
+          <label class="field" for="lens-slider">
+            <span>Truth lens</span>
+            <input id="lens-slider" type="range" min="0" max="100" step="1" value="58">
+          </label>
+
+          <label class="field" for="country-select">
+            <span>Spotlight country</span>
+            <select id="country-select"></select>
+          </label>
+
+          <div class="lens-readout">
+            <div class="lens-labels">
+              <span>Constraint lens</span>
+              <strong id="lens-value">58</strong>
+              <span>Transition lens</span>
+            </div>
+            <p id="lens-note" class="lens-note"></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="stage">
+        <article class="chart-card">
+          <div class="chart-heading">
+            <div>
+              <p class="eyebrow">Morphing sky</p>
+              <h2>Not all low-carbon countries mean the same thing</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="constellation-chart" class="chart-frame"></div>
+        </article>
+
+        <aside class="reading-panel">
+          <p class="eyebrow">How to read</p>
+          <h2>Three meanings in one sky</h2>
+          <div class="reading-list">
+            <p><strong>Higher stars</strong> carry more carbon pressure per person.</p>
+            <p><strong>Left-right drift</strong> changes with the truth lens: scarcity on the left, transition on the right.</p>
+            <p><strong>Bigger halos</strong> represent larger total national emissions.</p>
+            <p><strong>Green rays</strong> grow with renewable energy share.</p>
+            <p><strong>The spotlight trail</strong> traces one country's path across years.</p>
+          </div>
+
+          <div id="summary-strip" class="summary-strip"></div>
+          <div id="detail-panel" class="detail-panel"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

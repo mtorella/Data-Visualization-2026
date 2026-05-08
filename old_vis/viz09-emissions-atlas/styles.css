@@ -1,0 +1,342 @@
+/* ── Design tokens ── */
+:root {
+  --bg:       #0b1a12;
+  --surface:  #0f2218;
+  --border:   rgba(120, 200, 160, 0.12);
+  --text:     rgba(220, 240, 230, 0.90);
+  --muted:    rgba(160, 200, 175, 0.55);
+  --dim:      rgba(120, 170, 145, 0.35);
+  --target:   rgba(78, 205, 196, 0.09);
+  --target-b: rgba(78, 205, 196, 0.28);
+  --shadow:   0 32px 80px rgba(0, 0, 0, 0.55);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Header ── */
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 32px;
+  align-items: center;
+  padding: 36px 44px 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #4ecdc4;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 5.5vw, 5.8rem);
+  line-height: 0.88;
+  color: rgba(220, 240, 230, 0.96);
+}
+
+.lede {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* ── Header meta ── */
+.header-meta {
+  display: grid;
+  gap: 20px;
+}
+
+.region-legend {
+  display: grid;
+  gap: 8px;
+}
+
+.region-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.88rem;
+  font-weight: 900;
+  color: var(--muted);
+}
+
+.region-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.axis-legend {
+  display: grid;
+  gap: 7px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.axis-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--dim);
+}
+
+.ax-arrow {
+  display: inline-block;
+  width: 22px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.target-chip {
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  border: 1px dashed var(--target-b);
+  border-radius: 3px;
+  background: var(--target);
+  flex-shrink: 0;
+}
+
+.target-item { color: #4ecdc4; opacity: 0.75; }
+
+/* ── Chart wrap ── */
+.chart-wrap {
+  position: relative;
+  padding: 0 44px 0;
+}
+
+.chart-frame {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.chart-frame svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0 20px;
+}
+
+.play-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 22px;
+  border: 1px solid rgba(78, 205, 196, 0.35);
+  border-radius: 8px;
+  background: rgba(78, 205, 196, 0.10);
+  color: #4ecdc4;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.14s, border-color 0.14s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.play-btn:hover {
+  background: rgba(78, 205, 196, 0.18);
+  border-color: rgba(78, 205, 196, 0.6);
+}
+
+.play-btn.is-playing { color: #ffd93d; border-color: rgba(255, 217, 61, 0.4); background: rgba(255, 217, 61, 0.08); }
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.slider-year {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--muted);
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.year-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(78, 205, 196, 0.18);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.year-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4ecdc4;
+  box-shadow: 0 0 12px rgba(78, 205, 196, 0.6);
+  cursor: pointer;
+}
+
+.year-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4ecdc4;
+  border: none;
+  box-shadow: 0 0 12px rgba(78, 205, 196, 0.6);
+  cursor: pointer;
+}
+
+/* ── Hover detail aside ── */
+.detail-aside {
+  position: fixed;
+  bottom: 28px;
+  right: 36px;
+  z-index: 99;
+  min-width: 240px;
+  max-width: 300px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(11, 34, 22, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+
+.detail-country {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.detail-row:last-child { border-bottom: 0; }
+
+.detail-row .label { color: var(--muted); font-weight: 800; }
+.detail-row .val   { color: var(--text);  font-weight: 900; font-family: Georgia, serif; }
+
+/* ── SVG element styles ── */
+
+/* Grid */
+.chart-grid line { stroke: rgba(120, 200, 160, 0.07); stroke-width: 1; }
+
+/* Axes */
+.axis-label {
+  fill: rgba(160, 200, 175, 0.50);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* Year watermark */
+.year-watermark {
+  fill: rgba(78, 205, 196, 0.08);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 140px;
+  font-weight: 800;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Quadrant labels */
+.quadrant-label {
+  fill: rgba(160, 200, 175, 0.25);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* Comet tails */
+.trail-full {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trail-hot {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Comet head */
+.comet-halo {
+  fill: none;
+  opacity: 0.22;
+}
+
+.comet-head {
+  cursor: pointer;
+}
+
+.comet-hit {
+  fill: transparent;
+  stroke: none;
+  cursor: pointer;
+}
+
+/* Country name label */
+.comet-name {
+  fill: var(--text);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  pointer-events: none;
+  paint-order: stroke;
+  stroke: #0b1a12;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .page-header { grid-template-columns: 1fr; padding: 24px 20px 18px; }
+  .chart-wrap  { padding: 0 20px; }
+}

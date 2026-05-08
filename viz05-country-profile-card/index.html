@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Country Profile | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Who Pollutes, Who Pays home">
+        <span>Who pollutes,</span>
+        <strong>who pays?</strong>
+      </a>
+      <nav class="nav-links" aria-label="Project pages">
+        <a href="../">Home</a>
+        <a href="../python-visualizations/">Python</a>
+        <a href="../tableau-dashboard/">Tableau</a>
+        <a aria-current="page" href="./">Profile</a>
+        <a href="../viz06-radial-bloom-fingerprint/">Pressure wheel</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="topbar" aria-labelledby="page-title">
+        <div class="title-block">
+          <p class="eyebrow">Viz 05 / JavaScript</p>
+          <h1 id="page-title">Country profile</h1>
+          <p class="lede">
+            A compact country-level view of emissions intensity, economic context,
+            total footprint, and change over time.
+          </p>
+          <div class="page-actions" aria-label="Page navigation">
+            <a class="button button-secondary" href="../">Back to project home</a>
+            <a class="button button-primary" href="../viz06-radial-bloom-fingerprint/">Next: pressure wheel</a>
+          </div>
+        </div>
+      </section>
+
+      <article class="profile-board" aria-live="polite">
+        <header class="country-hero">
+          <div class="hero-status">
+            <p class="summary-label">Emissions status</p>
+            <strong id="status-label">Loading</strong>
+            <p id="status-detail">Reading df_panel.csv</p>
+          </div>
+
+          <div class="hero-copy">
+            <p class="profile-kicker" id="profile-region">Region</p>
+            <div class="country-line">
+              <h2 id="profile-country">Country</h2>
+              <div class="stat-pill population-pill">
+                <span>Population</span>
+                <strong id="population-value">--</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <form class="controls" aria-label="Profile controls">
+              <label class="field" for="country-search">
+                <span>Country</span>
+                <div class="country-combobox">
+                  <input
+                    id="country-search"
+                    type="search"
+                    autocomplete="off"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-controls="country-options"
+                  >
+                  <button class="country-toggle" type="button" aria-label="Show countries" aria-controls="country-options"></button>
+                  <div class="country-options" id="country-options" role="listbox"></div>
+                </div>
+              </label>
+
+              <label class="field year-field" for="year-search">
+                <span>Year</span>
+                <div class="year-combobox">
+                  <input
+                    id="year-search"
+                    type="search"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    aria-autocomplete="list"
+                    aria-expanded="false"
+                    aria-controls="year-options"
+                  >
+                  <button class="year-toggle" type="button" aria-label="Show years" aria-controls="year-options"></button>
+                  <div class="year-options" id="year-options" role="listbox"></div>
+                </div>
+              </label>
+            </form>
+            <span class="visually-hidden" id="profile-year">--</span>
+          </div>
+        </header>
+
+        <section class="story-grid">
+          <article class="chart-panel" aria-labelledby="trend-title">
+            <div class="panel-heading">
+              <div>
+                <p class="summary-label">Gap view</p>
+                <h3 id="trend-title">Emissions gap timeline</h3>
+              </div>
+            </div>
+            <div class="chart-frame" id="trend-chart"></div>
+          </article>
+
+          <aside class="insight-panel" aria-labelledby="insight-title">
+            <p class="summary-label">Interpretation</p>
+            <h3 id="insight-title">What the profile says</h3>
+            <div class="insight-list" id="insight-list"></div>
+          </aside>
+        </section>
+
+        <section class="comparison-panel" aria-labelledby="comparison-title">
+          <div class="panel-heading">
+            <div>
+              <p class="summary-label">Selected-year profile</p>
+              <h3 id="comparison-title">Wealth, emissions intensity, and total footprint</h3>
+            </div>
+          </div>
+          <div class="profile-map" id="metric-list"></div>
+        </section>
+
+        <footer class="card-note" id="card-note"></footer>
+      </article>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

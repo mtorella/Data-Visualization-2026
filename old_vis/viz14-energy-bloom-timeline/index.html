@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Energy Bloom Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Viz 14 / D3.js / Creative Option 4</p>
+          <h1>Energy Bloom Timeline</h1>
+          <p class="lede">This option sacrifices density for clarity and beauty. Instead of showing every country at once, it lets a few countries bloom through time so their energy identities become visually memorable.</p>
+        </div>
+        <form class="controls">
+          <label class="field">
+            <span>Year</span>
+            <input id="year-slider" type="range" min="2014" max="2021" step="1" value="2021">
+          </label>
+          <label class="field">
+            <span>Country A</span>
+            <select id="country-a"></select>
+          </label>
+          <label class="field">
+            <span>Country B</span>
+            <select id="country-b"></select>
+          </label>
+          <label class="field">
+            <span>Country C</span>
+            <select id="country-c"></select>
+          </label>
+          <p id="year-readout" class="year-readout"></p>
+        </form>
+      </section>
+
+      <section class="layout">
+        <article class="card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Animated country portraits</p>
+              <h2>Watch three energy identities bloom year by year</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="garden" class="garden"></div>
+        </article>
+
+        <aside class="card sidebar">
+          <h2>How to read</h2>
+          <p>Petal length reflects GHG per person. Petal openness reflects electricity access. Green filaments reflect renewable share. The center disk grows with GDP per person.</p>
+          <p>Changing the year causes the same countries to re-bloom. This makes the visual identity of change more memorable than a standard line chart.</p>
+          <div id="detail" class="detail"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

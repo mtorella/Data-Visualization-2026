@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transition Pressure Wheel | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Who Pollutes, Who Pays home">
+        <span>Who pollutes,</span>
+        <strong>who pays?</strong>
+      </a>
+      <nav class="nav-links" aria-label="Project pages">
+        <a href="../">Home</a>
+        <a href="../python-visualizations/">Python</a>
+        <a href="../tableau-dashboard/">Tableau</a>
+        <a href="../viz05-country-profile-card/">Profile</a>
+        <a aria-current="page" href="./">Pressure wheel</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Viz 07 / D3.js / Creative</p>
+          <h1 id="page-title">Transition Pressure Wheel</h1>
+          <p class="lede">
+            A radial stacked skyline of countries. Taller stacks mean a stronger climate-action
+            pressure signal: high emissions, high economic capacity, broad electricity access,
+            and a bigger renewable gap.
+          </p>
+          <div class="page-actions" aria-label="Page navigation">
+            <a class="button button-secondary" href="../viz05-country-profile-card/">Previous: country profile</a>
+            <a class="button button-primary" href="../">Back to project home</a>
+          </div>
+        </div>
+
+        <form class="controls" aria-label="Fingerprint controls">
+          <label class="field" for="year-select">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+
+          <div class="field country-field">
+            <span>Countries <em>(up to 4)</em></span>
+            <div class="country-grid" id="country-grid"></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="stage">
+        <article class="chart-card">
+          <div class="chart-heading">
+            <div>
+              <p class="eyebrow">Creative D3 radial stack</p>
+              <h2 id="chart-title">Where transition pressure concentrates</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="fingerprint-chart" class="chart-frame"></div>
+        </article>
+
+        <aside class="reading-panel">
+          <div class="reading-sticky">
+            <div class="reading-block">
+              <p class="eyebrow">How to read</p>
+              <h2>The wheel ranks responsibility</h2>
+              <div class="reading-list">
+                <p><strong>Wedge</strong> = one country in the selected year.</p>
+                <p><strong>Height</strong> = combined pressure across four signals.</p>
+                <p><strong>Order</strong> = strongest pressure clockwise from the top.</p>
+                <p><strong>Click color</strong> = isolate one signal across all countries.</p>
+              </div>
+            </div>
+
+            <div class="dim-legend">
+              <p class="eyebrow">Signal filter</p>
+              <div id="axis-legend"></div>
+            </div>
+
+            <div class="selected-panel">
+              <p class="eyebrow">Selected countries</p>
+              <div id="detail-panel" class="detail-panel"></div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

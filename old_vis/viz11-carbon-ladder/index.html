@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carbon Ladder</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Viz 11 / D3.js / Creative Option 1</p>
+          <h1>Carbon Ladder</h1>
+          <p class="lede">Countries do not all stand on the same rung of climate progress. This ladder asks whether a low-carbon profile comes with broad energy access and renewable strength, or whether it rests on weaker economic and infrastructure conditions.</p>
+        </div>
+        <form class="controls">
+          <label class="field">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+          <label class="field">
+            <span>Interpretation Lens</span>
+            <input id="lens-slider" type="range" min="0" max="100" value="60">
+          </label>
+          <label class="field">
+            <span>Highlight Country</span>
+            <select id="country-select"></select>
+          </label>
+          <p id="lens-note" class="lens-note"></p>
+        </form>
+      </section>
+
+      <section class="layout">
+        <article class="card chart-card">
+          <div class="card-head">
+            <div>
+              <p class="eyebrow">Climbing the same ladder differently</p>
+              <h2>Low emissions are not the whole story</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="chart" class="chart"></div>
+        </article>
+
+        <aside class="card sidebar">
+          <h2>How to read</h2>
+          <p>Higher rungs indicate stronger transition conditions once emissions, access, renewables, and capacity are read together.</p>
+          <p>Leftward drift suggests that low emissions may rely more on constraint. Rightward drift suggests a cleaner transition with stronger access and capacity.</p>
+          <p>Bubble size shows total emissions. Hover any country to read its profile.</p>
+          <div id="detail" class="detail"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

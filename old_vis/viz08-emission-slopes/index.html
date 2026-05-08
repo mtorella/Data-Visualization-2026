@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decarbonisation Slopes | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+
+      <header class="topbar">
+        <div class="title-block">
+          <p class="eyebrow">Viz 08 / D3.js</p>
+          <h1>Decarbonisation<br>Slopes</h1>
+          <p class="lede">
+            Each line is one country's journey from 2014 to 2023.
+            Lines falling left show progress — emissions dropping.
+            Lines climbing right show backsliding.
+            Stroke weight encodes the absolute size of the shift.
+          </p>
+        </div>
+
+        <div class="controls-bar">
+          <div class="region-bar" id="region-bar">
+            <span class="field-label">Filter by region</span>
+            <div id="region-chips"></div>
+          </div>
+
+          <div class="mode-bar">
+            <span class="field-label">Colour by</span>
+            <div class="mode-toggle" id="mode-toggle">
+              <button class="mode-btn is-active" data-mode="direction">Direction</button>
+              <button class="mode-btn" data-mode="region">Region</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="chart-section">
+        <div id="slope-chart" class="chart-frame"></div>
+
+        <aside class="sidebar">
+          <div class="stat-box" id="stat-box">
+            <div class="stat-row">
+              <span class="stat-label">Countries tracked</span>
+              <strong id="stat-n">–</strong>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Reduced emissions</span>
+              <strong id="stat-improved" style="color:var(--forest)">–</strong>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Increased emissions</span>
+              <strong id="stat-worsened" style="color:var(--coral)">–</strong>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Median change</span>
+              <strong id="stat-median">–</strong>
+            </div>
+          </div>
+
+          <div class="legend-box">
+            <p class="field-label">Reading guide</p>
+            <div class="legend-item">
+              <span class="legend-swatch" style="background:var(--forest)"></span>
+              Emissions fell 2014 → 2023
+            </div>
+            <div class="legend-item">
+              <span class="legend-swatch" style="background:var(--coral)"></span>
+              Emissions rose 2014 → 2023
+            </div>
+            <div class="legend-item">
+              <span class="legend-swatch thick"></span>
+              Thicker line = larger absolute shift
+            </div>
+          </div>
+
+          <div id="hover-detail" class="hover-detail" style="display:none">
+            <p class="field-label">Selected</p>
+            <div id="hover-content"></div>
+          </div>
+
+          <div class="ranking-box">
+            <p class="field-label">Biggest improvers 2014–2023</p>
+            <ol id="top-improvers" class="rank-list"></ol>
+          </div>
+
+          <div class="ranking-box">
+            <p class="field-label">Biggest backsliders 2014–2023</p>
+            <ol id="top-worsened" class="rank-list" data-bad></ol>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

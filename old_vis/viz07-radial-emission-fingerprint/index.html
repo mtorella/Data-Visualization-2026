@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climate Constellation | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Viz 07 / D3.js / Creative</p>
+          <h1 id="page-title">Climate Constellation</h1>
+          <p class="lede">
+            A country becomes a planet: wealth and emissions place it in the sky,
+            while renewables and electricity access shape its orbit.
+          </p>
+        </div>
+
+        <form class="controls" aria-label="Fingerprint controls">
+          <label class="field" for="year-select">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+
+          <div class="field country-field">
+            <span>Countries</span>
+            <div class="country-grid" id="country-grid"></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="stage">
+        <article class="chart-card">
+          <div class="chart-heading">
+            <div>
+              <p class="eyebrow">Four-variable climate profile</p>
+              <h2 id="chart-title">Country planets in the global field</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="fingerprint-chart" class="chart-frame"></div>
+        </article>
+
+        <aside class="reading-panel">
+          <p class="eyebrow">How to read</p>
+          <h2>Position tells the tension</h2>
+          <div class="reading-list">
+            <p><strong>Right</strong> means higher GDP per person.</p>
+            <p><strong>Up</strong> means higher emissions per person.</p>
+            <p><strong>Green orbit</strong> shows renewable energy share.</p>
+            <p><strong>Gold halo</strong> shows electricity access.</p>
+            <p><strong>Dotted tethers</strong> point back to the exact GDP/emissions location when planets are nudged apart.</p>
+            <p><strong>Best direction</strong> is toward the lower-right: high development with lower emissions intensity.</p>
+          </div>
+          <div id="detail-panel" class="detail-panel"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transition Pressure Wheel | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Viz 07 / D3.js / Creative</p>
+          <h1 id="page-title">Transition Pressure Wheel</h1>
+          <p class="lede">
+            A radial stacked skyline of countries. Taller stacks mean a stronger climate-action
+            pressure signal: high emissions, high economic capacity, broad electricity access,
+            and a bigger renewable gap.
+          </p>
+        </div>
+
+        <form class="controls" aria-label="Fingerprint controls">
+          <label class="field" for="year-select">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+
+          <div class="field country-field">
+            <span>Countries <em>(up to 4)</em></span>
+            <div class="country-grid" id="country-grid"></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="stage">
+        <article class="chart-card">
+          <div class="chart-heading">
+            <div>
+              <p class="eyebrow">Creative D3 radial stack</p>
+              <h2 id="chart-title">Where transition pressure concentrates</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="fingerprint-chart" class="chart-frame"></div>
+        </article>
+
+        <aside class="reading-panel">
+          <p class="eyebrow">How to read</p>
+          <h2>The wheel ranks responsibility</h2>
+          <div class="reading-list">
+            <p><strong>Each wedge</strong> is one country in the selected year.</p>
+            <p><strong>Countries are sorted</strong> by transition pressure, from highest to lowest.</p>
+            <p><strong>Stack height</strong> combines four signals: emissions, GDP capacity, electricity access, and renewable gap.</p>
+            <p><strong>Renewable gap</strong> is reversed: low renewable share creates a large green gap segment.</p>
+            <p><strong>Click a color</strong> in the wheel or legend to isolate only that signal across all countries.</p>
+            <p><strong>Selected countries</strong> glow and receive outer labels, so they can be compared against the whole world.</p>
+            <p><strong>Hover a segment</strong> to see the raw value and its contribution.</p>
+          </div>
+
+          <div class="dim-legend">
+            <p class="eyebrow" style="margin-top:20px">Stack guide</p>
+            <div id="axis-legend"></div>
+          </div>
+
+          <div id="detail-panel" class="detail-panel"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

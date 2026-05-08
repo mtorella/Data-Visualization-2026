@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climate Pressure Field | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Viz 07C / D3.js / Creative Draft</p>
+          <h1 id="page-title">Climate Pressure Field</h1>
+          <p class="lede">
+            Countries behave like particles inside a climate-development force field.
+            Four variables pull each country toward different pressure poles, revealing
+            whether its profile is dominated by emissions, capacity, renewable gap, or access gap.
+          </p>
+        </div>
+
+        <form class="controls" aria-label="Pressure field controls">
+          <label class="field" for="year-select">
+            <span>Year</span>
+            <select id="year-select"></select>
+          </label>
+
+          <div class="field country-field">
+            <span>Highlight countries <em>(up to 4)</em></span>
+            <div class="country-grid" id="country-grid"></div>
+          </div>
+        </form>
+      </section>
+
+      <section class="stage">
+        <article class="chart-card">
+          <div class="chart-heading">
+            <div>
+              <p class="eyebrow">Force-layout climate profile</p>
+              <h2>Where country pressure settles</h2>
+            </div>
+            <p id="coverage-note" class="coverage-note"></p>
+          </div>
+          <div id="pressure-field" class="chart-frame"></div>
+        </article>
+
+        <aside class="reading-panel">
+          <p class="eyebrow">How to read</p>
+          <h2>A map of competing pressures</h2>
+          <div class="reading-list">
+            <p><strong>Each dot</strong> is one country in the selected year.</p>
+            <p><strong>Position</strong> is determined by four invisible pulls: emissions, GDP capacity, renewable gap, and electricity access gap.</p>
+            <p><strong>Bigger dots</strong> have stronger combined transition pressure.</p>
+            <p><strong>Color</strong> shows the strongest pressure in that country profile.</p>
+            <p><strong>Near the center</strong> means the country is pulled by several pressures at once.</p>
+          </div>
+
+          <div class="pole-legend" id="pole-legend"></div>
+          <div id="detail-panel" class="detail-panel"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

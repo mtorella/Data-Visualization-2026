@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Who Pollutes, Who Pays? | Climate Data Story</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Who Pollutes, Who Pays home">
+        <span>Who pollutes,</span>
+        <strong>who pays?</strong>
+      </a>
+      <nav class="nav-links" aria-label="Page sections">
+        <a href="#story">Story</a>
+        <a href="#data">Data</a>
+        <a href="#tasks">Tasks</a>
+        <div class="nav-menu">
+          <a class="nav-menu-trigger" href="#visualizations">Visualizations</a>
+          <div class="nav-menu-panel" aria-label="Visualization pages">
+            <a href="python-visualizations/">
+              <span>01 / Python</span>
+              <strong>Cleaning and EDA</strong>
+            </a>
+            <a href="tableau-dashboard/">
+              <span>02 / Tableau</span>
+              <strong>Dashboard space</strong>
+            </a>
+            <a href="viz05-country-profile-card/">
+              <span>03 / JavaScript</span>
+              <strong>Country profile</strong>
+            </a>
+            <a href="viz06-radial-bloom-fingerprint/">
+              <span>04 / D3.js</span>
+              <strong>Pressure wheel</strong>
+            </a>
+          </div>
+        </div>
+        <a href="#findings">Findings</a>
+      </nav>
+    </header>
+
+    <main id="top" class="shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Data Visualization 2026</p>
+          <h1 id="page-title">Who pollutes, who pays?</h1>
+          <p class="lede">
+            A visual analytics project about climate responsibility, economic
+            capacity, energy transition gaps, and electricity access across
+            countries from 2014 to 2023.
+          </p>
+          <div class="hero-facts" aria-label="Project at a glance">
+            <div>
+              <span>Period</span>
+              <strong>2014-2023</strong>
+            </div>
+            <div>
+              <span>Unit</span>
+              <strong>Country-year</strong>
+            </div>
+            <div>
+              <span>Focus</span>
+              <strong>Climate pressure</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="question-card" aria-labelledby="question-title">
+          <p class="eyebrow">Central question</p>
+          <h2 id="question-title">
+            Which countries face the strongest climate-action pressure when
+            emissions, wealth, renewables, and access are viewed together?
+          </h2>
+          <p>
+            We do not treat emissions as a single number. The project compares
+            pollution intensity with economic capacity and energy-system context,
+            so a country can be read as a profile rather than a ranking alone.
+          </p>
+        </aside>
+      </section>
+
+      <section id="story" class="section-card story-section">
+        <div class="section-heading">
+          <p class="eyebrow">Project story</p>
+          <h2>From country diagnosis to global climate pressure</h2>
+          <p>
+            The page is organized like a guided report: first the question, then
+            the data, then the tasks, and finally the interactive visualizations.
+          </p>
+        </div>
+        <div class="story-grid">
+          <article>
+            <h3>Why this matters</h3>
+            <p>
+              Climate debates often collapse into one question: who emits the
+              most? That is important, but incomplete. A fairer interpretation
+              also asks who emits more per person, who has more economic capacity,
+              who still depends on fossil energy, and who has basic electricity
+              access.
+            </p>
+          </article>
+          <article>
+            <h3>Target audience</h3>
+            <p>
+              The audience is non-expert readers, students, and policy-curious
+              users who need a clear way to compare countries without reading a
+              technical report. The interface starts with simple explanations and
+              then offers richer interactive views.
+            </p>
+          </article>
+          <article>
+            <h3>Design direction</h3>
+            <p>
+              The visual style is warm and editorial: large country names, clear
+              cards, restrained color, and a small number of strong interactions.
+              The goal is to feel like a coherent story, not a folder of charts.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="data" class="section-card">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Dataset description</p>
+            <h2>Four public data streams joined into one country-year panel</h2>
+          </div>
+          <p class="section-note">
+            Final working file: <strong>df_panel.csv</strong>, covering 2014-2023
+            country-year records after cleaning and integration.
+          </p>
+        </div>
+
+        <div class="data-grid">
+          <article class="data-card">
+            <span class="data-icon emissions"></span>
+            <h3>GHG emissions</h3>
+            <p>OECD air-emissions data gives greenhouse gas emissions per person.</p>
+            <strong>Used for intensity and footprint views</strong>
+          </article>
+          <article class="data-card">
+            <span class="data-icon wealth"></span>
+            <h3>GDP per capita PPP</h3>
+            <p>World Bank economic indicators approximate a country's capacity to act.</p>
+            <strong>Used for economic context</strong>
+          </article>
+          <article class="data-card">
+            <span class="data-icon energy"></span>
+            <h3>Energy transition</h3>
+            <p>World Bank energy indicators describe renewable share and fossil dependence.</p>
+            <strong>Used for transition-gap signals</strong>
+          </article>
+          <article class="data-card">
+            <span class="data-icon access"></span>
+            <h3>Population and access</h3>
+            <p>Population and electricity access help separate total scale from basic needs.</p>
+            <strong>Used for total footprint and access context</strong>
+          </article>
+        </div>
+
+        <div class="limitations">
+          <article>
+            <p class="eyebrow">Limitations and bias</p>
+            <h3>What the data can hide</h3>
+            <p>
+              Missing values are not random. Some countries are absent from OECD
+              or World Bank indicators, and renewable-energy coverage becomes
+              weaker in recent years. This can make some countries look less
+              comparable than others.
+            </p>
+          </article>
+          <article>
+            <h3>What the metrics simplify</h3>
+            <p>
+              GDP per capita is only a proxy for capacity. Emissions per capita
+              does not show historical responsibility, exported consumption, or
+              within-country inequality. The visualizations should support
+              interpretation, not replace context.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="tasks" class="section-card task-section">
+        <div class="section-heading">
+          <p class="eyebrow">Task analysis</p>
+          <h2>What the system should help users do</h2>
+          <p>
+            These tasks shaped the interface: every visualization should answer
+            a specific question instead of simply displaying another variable.
+          </p>
+        </div>
+        <ol class="task-list">
+          <li>
+            <span>01</span>
+            <p>Choose a country and understand its emissions profile in plain language.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <p>Compare a country against its regional and global averages for a selected year.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <p>See whether emissions intensity is moving up or down across time.</p>
+          </li>
+          <li>
+            <span>04</span>
+            <p>Identify countries where pressure is high because several dimensions align.</p>
+          </li>
+          <li>
+            <span>05</span>
+            <p>Recognize where missing data or metric choices may limit the interpretation.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="visualizations" class="section-card">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Interactive visualizations</p>
+            <h2>Explore the project views</h2>
+          </div>
+          <div class="filter-bar" aria-label="Filter visualization cards">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="python">Python</button>
+            <button class="filter-button" type="button" data-filter="tableau">Tableau</button>
+            <button class="filter-button" type="button" data-filter="javascript">JavaScript</button>
+          </div>
+        </div>
+
+        <div class="visual-grid" id="visual-grid">
+          <article class="visual-card placeholder" data-tool="python">
+            <div class="visual-meta">
+              <span class="visual-number">01</span>
+              <span class="tool-pill">Python</span>
+            </div>
+            <h3>Cleaning and exploratory analysis</h3>
+            <ul class="visual-points">
+              <li>Cleaning pipeline</li>
+              <li>Integration checks</li>
+              <li>Exploratory evidence</li>
+            </ul>
+            <p>
+              Notebook outputs will document cleaning, integration, exploratory
+              checks, and design choices.
+            </p>
+            <a class="button button-secondary" href="python-visualizations/">Open placeholder</a>
+          </article>
+
+          <article class="visual-card placeholder" data-tool="tableau">
+            <div class="visual-meta">
+              <span class="visual-number">02</span>
+              <span class="tool-pill">Tableau</span>
+            </div>
+            <h3>Interactive dashboard space</h3>
+            <ul class="visual-points">
+              <li>Linked filters</li>
+              <li>Country groups</li>
+              <li>Dashboard context</li>
+            </ul>
+            <p>
+              Future linked Tableau views will support broader country filtering
+              and dashboard-level exploration.
+            </p>
+            <a class="button button-secondary" href="tableau-dashboard/">Open placeholder</a>
+          </article>
+
+          <article class="visual-card featured" data-tool="javascript">
+            <div class="visual-meta">
+              <span class="visual-number">03</span>
+              <span class="tool-pill">JavaScript</span>
+            </div>
+            <h3>Country profile card</h3>
+            <ul class="visual-points">
+              <li>Country and year controls</li>
+              <li>Regional comparison</li>
+              <li>Explanatory text</li>
+            </ul>
+            <p>
+              The explanatory view: choose any country and year to see emissions
+              status, trend, wealth context, and total footprint.
+            </p>
+            <a class="button button-primary" href="viz05-country-profile-card/">Launch visualization</a>
+          </article>
+
+          <article class="visual-card featured creative" data-tool="javascript">
+            <div class="visual-meta">
+              <span class="visual-number">04</span>
+              <span class="tool-pill">D3.js creative</span>
+            </div>
+            <h3>Transition pressure wheel</h3>
+            <ul class="visual-points">
+              <li>Creative radial stack</li>
+              <li>Signal filtering</li>
+              <li>Country highlighting</li>
+            </ul>
+            <p>
+              The creative view: countries become radial stacked signals, sorted
+              by combined pressure across emissions, capacity, access, and gaps.
+            </p>
+            <a class="button button-primary" href="viz06-radial-bloom-fingerprint/">Launch creative view</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="findings" class="section-card conclusion-section">
+        <div class="section-heading">
+          <p class="eyebrow">Conclusion</p>
+          <h2>Main findings so far</h2>
+        </div>
+        <div class="finding-grid">
+          <article>
+            <span>01</span>
+            <h3>Responsibility is multidimensional</h3>
+            <p>
+              A high-emitting country is not always the largest total emitter,
+              and a wealthy country may have more capacity to change even when
+              its current profile looks moderate.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Regional context changes the story</h3>
+            <p>
+              The same country can look close to the global average but very
+              different from its region. That is why the profile card keeps both
+              comparisons visible.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Energy indicators need careful reading</h3>
+            <p>
+              Renewable share and electricity access are useful, but uneven
+              coverage and near-universal access in wealthy regions mean they
+              should be interpreted as context, not as a simple score.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Data Visualization 2026 · Public-data project using OECD and World Bank
+        indicators · Built as an HTML/CSS/JavaScript project page.
+      </p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="home.js"></script>
+  </body>
+</html>

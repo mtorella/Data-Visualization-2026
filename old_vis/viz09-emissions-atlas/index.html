@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Climate Atlas | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header class="page-header">
+      <div class="header-copy">
+        <p class="eyebrow">Viz 09 / D3.js / Creative</p>
+        <h1>The Climate<br>Atlas</h1>
+        <p class="lede">
+          Each comet is a country. Its position encodes wealth vs. emissions —
+          the ideal destination is the lower right. Press play to watch
+          a decade of trajectories unfold.
+        </p>
+      </div>
+
+      <div class="header-meta">
+        <div class="region-legend" id="region-legend"></div>
+        <div class="axis-legend">
+          <div class="axis-item">
+            <span class="ax-arrow ax-right">→</span>
+            Richer (higher GDP per capita)
+          </div>
+          <div class="axis-item">
+            <span class="ax-arrow ax-down">↓</span>
+            Cleaner (lower GHG per capita)
+          </div>
+          <div class="axis-item target-item">
+            <span class="target-chip"></span>
+            Target zone — high wealth, low emissions
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="chart-wrap">
+      <div id="comet-chart" class="chart-frame"></div>
+
+      <div class="controls">
+        <button id="play-btn" class="play-btn" aria-label="Play animation">
+          <span class="play-icon">▶</span>
+          <span class="play-label">Play 2014 → 2023</span>
+        </button>
+
+        <div class="slider-row">
+          <span class="slider-year" id="year-display">2014</span>
+          <input id="year-slider" class="year-slider" type="range" min="2014" max="2023" step="1" value="2014">
+          <span class="slider-year">2023</span>
+        </div>
+      </div>
+    </div>
+
+    <aside id="detail-aside" class="detail-aside" style="display:none">
+      <div id="detail-inner"></div>
+    </aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
