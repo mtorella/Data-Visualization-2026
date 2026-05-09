@@ -397,42 +397,54 @@ function bindSegmentEvents(selection) {
 }
 
 function drawSelectedLabels(wheel, selectedRows, angle, innerRadius, segmentMax) {
-  const labelRadius = innerRadius + segmentMax * (getActiveVariable() ? 1.36 : 4.35);
+  const activeVariable = getActiveVariable();
+  const minLabelRadius = innerRadius + (activeVariable ? 56 : segmentMax * 3.6);
+  const maxLabelRadius = innerRadius + segmentMax * (activeVariable ? 1.12 : variables.length + 0.42);
+  const lineGap = activeVariable ? 6 : 10;
+  const labelGap = activeVariable ? 28 : 36;
+  const labelGapY = activeVariable ? 42 : 38;
+  const labelLayout = resolveSelectedLabelLayout(
+    selectedRows,
+    angle,
+    innerRadius,
+    segmentMax,
+    activeVariable,
+    minLabelRadius,
+    maxLabelRadius,
+    labelGap,
+    lineGap,
+    labelGapY
+  );
 
   const labels = wheel.append("g")
     .attr("class", "selected-labels")
     .selectAll("g")
-    .data(selectedRows)
+    .data(labelLayout)
     .join("g")
-    .attr("transform", (row) => {
-      const a = (angle(row.country_name_ghg) || 0) + angle.bandwidth() / 2;
-      const point = polar(a, labelRadius);
-      return `translate(${point.x} ${point.y})`;
-    });
+    .attr("transform", (d) => `translate(${d.labelX} ${d.labelY})`);
 
   labels.append("line")
     .attr("class", "label-tick")
-    .attr("x1", (row) => -polar(midAngle(row, angle), 38).x)
-    .attr("y1", (row) => -polar(midAngle(row, angle), 38).y)
+    .attr("x1", (d) => d.lineStartX - d.labelX)
+    .attr("y1", (d) => d.lineStartY - d.labelY)
     .attr("x2", 0)
     .attr("y2", 0)
-    .attr("stroke", (row) => countryPalette[state.selectedCountries.indexOf(row.country_name_ghg)] || "#17211f");
+    .attr("stroke", (d) => countryPalette[state.selectedCountries.indexOf(d.row.country_name_ghg)] || "#17211f");
 
   labels.append("text")
     .attr("class", "selected-country-label")
-    .attr("text-anchor", (row) => labelAnchor(midAngle(row, angle)))
-    .attr("x", (row) => labelAnchor(midAngle(row, angle)) === "start" ? 8 : -8)
+    .attr("text-anchor", (d) => d.anchor)
+    .attr("x", (d) => d.anchor === "start" ? 8 : -8)
     .attr("y", -6)
-    .text((row) => row.country_name_ghg);
+    .text((d) => d.row.country_name_ghg);
 
   labels.append("text")
     .attr("class", "selected-score-label")
-    .attr("text-anchor", (row) => labelAnchor(midAngle(row, angle)))
-    .attr("x", (row) => labelAnchor(midAngle(row, angle)) === "start" ? 8 : -8)
+    .attr("text-anchor", (d) => d.anchor)
+    .attr("x", (d) => d.anchor === "start" ? 8 : -8)
     .attr("y", 14)
-    .text((row) => {
-      const activeVariable = getActiveVariable();
-      const score = activeVariable ? componentScore(row, activeVariable.id) : row.pressure;
+    .text((d) => {
+      const score = activeVariable ? componentScore(d.row, activeVariable.id) : d.row.pressure;
       return `${fmtN(score * 100, 0)} ${activeVariable ? activeVariable.short : "pressure"}`;
     });
 }
@@ -604,6 +616,65 @@ function moveTip(event) {
 
 function hideTip() {
   tip.style("opacity", 0);
+}
+
+function selectedOuterRadius(row, innerRadius, segmentMax, activeVariable) {
+  const totalScore = activeVariable
+    ? componentScore(row, activeVariable.id)
+    : row.components.reduce((sum, component) => sum + component.score, 0);
+  return innerRadius + totalScore * segmentMax;
+}
+
+function selectedLabelRadius(row, innerRadius, segmentMax, activeVariable, minLabelRadius, maxLabelRadius, labelGap) {
+  return clamp(
+    selectedOuterRadius(row, innerRadius, segmentMax, activeVariable) + labelGap,
+    minLabelRadius,
+    maxLabelRadius
+  );
+}
+
+function resolveSelectedLabelLayout(rows, angle, innerRadius, segmentMax, activeVariable, minLabelRadius, maxLabelRadius, labelGap, lineGap, labelGapY) {
+  const layout = rows.map((row) => {
+    const a = midAngle(row, angle);
+    const anchor = labelAnchor(a);
+    const labelRadius = selectedLabelRadius(row, innerRadius, segmentMax, activeVariable, minLabelRadius, maxLabelRadius, labelGap);
+    const labelPoint = polar(a, labelRadius);
+    const lineStart = polar(a, selectedOuterRadius(row, innerRadius, segmentMax, activeVariable) + lineGap);
+    return {
+      row,
+      angle: a,
+      anchor,
+      labelRadius,
+      baseX: labelPoint.x,
+      baseY: labelPoint.y,
+      labelX: labelPoint.x,
+      labelY: labelPoint.y,
+      lineStartX: lineStart.x,
+      lineStartY: lineStart.y,
+    };
+  });
+
+  ["start", "end"].forEach((anchor) => {
+    const sideLabels = layout
+      .filter((d) => d.anchor === anchor)
+      .sort((a, b) => a.baseY - b.baseY);
+
+    let previousY = -Infinity;
+    sideLabels.forEach((d) => {
+      d.labelY = Math.max(d.baseY, previousY + labelGapY);
+      previousY = d.labelY;
+    });
+
+    previousY = Infinity;
+    for (let i = sideLabels.length - 1; i >= 0; i -= 1) {
+      const d = sideLabels[i];
+      const allowedY = previousY - labelGapY;
+      d.labelY = Math.min(d.labelY, allowedY);
+      previousY = d.labelY;
+    }
+  });
+
+  return layout;
 }
 
 function midAngle(row, angle) {
