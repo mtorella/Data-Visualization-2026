@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Python Evidence | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../Home/" aria-label="Who Pollutes, Who Pays home">
+        <span>Who pollutes,</span>
+        <strong>who pays?</strong>
+      </a>
+      <nav class="nav-links" aria-label="Project pages">
+        <a href="../Home/">Home</a>
+        <a aria-current="page" href="./">Python</a>
+        <a href="../Tableau/">Tableau</a>
+        <a href="../Country_profile_card/">Profile</a>
+        <a href="../Pressure_wheel/">Pressure wheel</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="topbar" aria-labelledby="page-title">
+        <div class="title-block">
+          <p class="eyebrow">Python / Static ethics view</p>
+          <h1 id="page-title">White hat, black hat</h1>
+          <p class="lede">
+            A static pair of Python charts showing how the same emissions data
+            can be presented transparently or manipulated through framing,
+            cherry-picking, and axis design.
+          </p>
+          <div class="page-actions" aria-label="Page navigation">
+            <a class="button button-secondary" href="../Home/">Back to project home</a>
+            <a class="button button-primary" href="../Tableau/">Next: Tableau dashboard</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ethics-board" aria-labelledby="ethics-title">
+        <header class="ethics-header">
+          <div>
+            <p class="eyebrow">Assignment requirement</p>
+            <h2 id="ethics-title">Two perspectives on the same data</h2>
+            <p>
+              The project must include one white-hat and one black-hat static
+              visualization. This page documents that requirement using the
+              Python notebook <strong>white_black_hat_options.ipynb</strong>.
+            </p>
+          </div>
+
+          <aside class="source-card" aria-label="Notebook source">
+            <span>Notebook source</span>
+            <strong>white_black_hat_options.ipynb</strong>
+            <p>
+              Focus: Europe & Central Asia average GHG per capita. The notebook
+              uses 2014-2021 because later renewable-energy coverage becomes less
+              complete.
+            </p>
+          </aside>
+        </header>
+
+        <figure class="comparison-figure">
+          <img
+            src="assets/white-black-hat-europe-trend.png"
+            alt="Side-by-side white-hat and black-hat charts comparing average GHG per capita in Europe and Central Asia"
+          >
+          <figcaption>
+            Same data family, different framing. The left chart uses a full
+            time window and zero baseline; the right chart narrows the window
+            and crops the y-axis to create a more dramatic story.
+          </figcaption>
+        </figure>
+
+        <div class="ethics-grid">
+          <article class="ethics-card white-hat">
+            <p class="eyebrow">White hat</p>
+            <h3>Transparent trend</h3>
+            <p>
+              The ethical version shows the full 2014-2021 trend for Europe &
+              Central Asia and starts the y-axis at zero. This makes the chart
+              less sensational, but it lets the viewer judge the actual size of
+              the change.
+            </p>
+            <strong>Design choice: context before drama.</strong>
+          </article>
+
+          <article class="ethics-card black-hat">
+            <p class="eyebrow">Black hat</p>
+            <h3>Manipulated rebound</h3>
+            <p>
+              The misleading version keeps only 2019-2021 and crops the y-axis.
+              The COVID-era dip and rebound look like a dramatic emissions spike,
+              even though the longer trend gives a more moderate interpretation.
+            </p>
+            <strong>Design choice: drama before context.</strong>
+          </article>
+
+          <article class="ethics-card takeaway">
+            <p class="eyebrow">What it teaches</p>
+            <h3>Axes and windows are arguments</h3>
+            <p>
+              A chart is never neutral by default. The chosen time span, baseline,
+              title, and axis limits can change the story even when the underlying
+              data points are not altered.
+            </p>
+            <strong>For this project, transparency is part of the analysis.</strong>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -18,7 +18,12 @@ Data-Visualisation-2026/
 ├── utils/
 │   └── clean_data.py                  # Converts raw World Bank exports to analysis-ready CSVs
 ├── preprocessing.ipynb                # Main pipeline: cleaning, joining, EDA
-├── viz05-country-profile-card/        # JavaScript country profile card
+├── website/
+│   ├── Home/                          # Main project webpage
+│   ├── Python/                        # Python static ethics visualizations
+│   ├── Tableau/                       # Embedded Tableau dashboard
+│   ├── Country_profile_card/          # JavaScript explanatory country profile
+│   └── Pressure_wheel/                # D3.js creative pressure-wheel visualization
 ├── df_panel.csv                       # Output: full joined panel (2014–2023)
 ├── df_slope.csv                       # Output: country endpoints for slope chart
 └── README.md
@@ -79,26 +84,10 @@ The notebook will produce two output CSV files in the project root:
 | `df_panel.csv` | Full joined panel — 789 rows × 11 columns, one row per country-year | Vizzes 01, 02, 04, 05, 06, 07, 08 |
 | `df_slope.csv` | One row per country with 2014 and 2023 GHG values and % change | Viz 03 (slope chart) |
 
-### Viz 05: Country Profile Card
+### Project Website
 
-The JavaScript country profile card lives in `viz05-country-profile-card/` and reads from `df_panel.csv`.
-Because the page fetches a local CSV file, run it through a small local web server from the repository root:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000/viz05-country-profile-card/
-```
-
-### Viz 07: Climate Constellation
-
-The creative D3.js visualization lives in `viz07-radial-emission-fingerprint/` and reads from `df_panel.csv`.
-It compares up to four countries as planet-like glyphs in a global field: GDP per capita controls horizontal position, GHG per capita controls vertical position, the green orbit shows renewables, and the gold halo shows electricity access.
-Use the same local web server command from the repository root:
+The finished webpage lives in `website/` and is split into one home page plus four visualization pages.
+Because the JavaScript pages fetch local files, run the site through a small local web server from the repository root:
 
 ```bash
 python3 -m http.server 8000
@@ -107,17 +96,14 @@ python3 -m http.server 8000
 Then open:
 
 ```text
-http://localhost:8000/viz07-radial-emission-fingerprint/
+http://localhost:8000/website/Home/
 ```
 
-Alternative creative drafts are also available:
+To kill the local server run:
 
-```text
-http://localhost:8000/viz07b-radial-bloom-fingerprint/
-http://localhost:8000/viz07c-climate-pressure-field/
+```bash
+kill $(lsof -ti :8000)
 ```
-
----
 
 ## Data Sources
 

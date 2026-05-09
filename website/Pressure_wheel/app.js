@@ -1,6 +1,6 @@
 "use strict";
 
-const DATA_URL = "../df_panel.csv";
+const DATA_URL = "../../df_panel.csv";
 const DEFAULT_YEAR = 2021;
 const MAX_COUNTRIES = 4;
 
@@ -585,7 +585,21 @@ function showTip(event, d) {
 }
 
 function moveTip(event) {
-  tip.style("left", `${event.clientX + 16}px`).style("top", `${event.clientY - 10}px`);
+  const tipNode = tip.node();
+  const tipWidth = tipNode ? tipNode.offsetWidth : 220;
+  const tipHeight = tipNode ? tipNode.offsetHeight : 120;
+  const scrollX = window.scrollX || window.pageXOffset;
+  const scrollY = window.scrollY || window.pageYOffset;
+  const pageX = Number.isFinite(event.pageX) ? event.pageX : scrollX + event.clientX;
+  const pageY = Number.isFinite(event.pageY) ? event.pageY : scrollY + event.clientY;
+  const minLeft = scrollX + 12;
+  const maxLeft = scrollX + window.innerWidth - tipWidth - 12;
+  const minTop = scrollY + 12;
+  const maxTop = scrollY + window.innerHeight - tipHeight - 12;
+  const left = clamp(pageX + 16, minLeft, Math.max(minLeft, maxLeft));
+  const top = clamp(pageY - tipHeight - 14, minTop, Math.max(minTop, maxTop));
+
+  tip.style("left", `${left}px`).style("top", `${top}px`);
 }
 
 function hideTip() {

@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
-  --ink: #17211f;
-  --muted: #61706c;
-  --paper: #f3efe6;
-  --panel: #fffaf0;
-  --line: #d8cfbd;
-  --forest: #1f6b57;
-  --teal: #2d9c93;
-  --coral: #d9674f;
-  --gold: #d7a944;
-  --blue: #3f7da8;
+  --ink: #10231f;
+  --muted: #5f706b;
+  --paper: #e9eee6;
+  --panel: #fbf7ec;
+  --line: #c7d0c4;
+  --forest: #155f4a;
+  --teal: #258b86;
+  --coral: #c85f49;
+  --gold: #c89a32;
+  --blue: #386f91;
   --shadow: 0 24px 60px rgba(28, 38, 34, 0.14);
   font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
 }
@@ -23,14 +23,26 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 50% 44%, rgba(23, 33, 31, 0.08), transparent 30%),
-    radial-gradient(circle at 78% 22%, rgba(215, 169, 68, 0.18), transparent 24%),
-    radial-gradient(circle at 14% 78%, rgba(63, 125, 168, 0.15), transparent 28%),
-    linear-gradient(110deg, rgba(31, 107, 87, 0.13), transparent 34%),
-    linear-gradient(290deg, rgba(217, 103, 79, 0.13), transparent 38%),
-    repeating-linear-gradient(0deg, rgba(23, 33, 31, 0.035) 0 1px, transparent 1px 26px),
+    radial-gradient(circle at 50% 44%, rgba(16, 35, 31, 0.08), transparent 30%),
+    radial-gradient(circle at 78% 22%, rgba(200, 154, 50, 0.18), transparent 24%),
+    radial-gradient(circle at 14% 78%, rgba(56, 111, 145, 0.15), transparent 28%),
+    linear-gradient(112deg, rgba(21, 95, 74, 0.13), transparent 38%),
+    linear-gradient(292deg, rgba(200, 95, 73, 0.11), transparent 42%),
+    repeating-linear-gradient(0deg, rgba(16, 35, 31, 0.04) 0 1px, transparent 1px 28px),
     var(--paper);
   animation: page-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 84% 22%, rgba(56, 111, 145, 0.12), transparent 18rem),
+    radial-gradient(circle at 12% 28%, rgba(21, 95, 74, 0.11), transparent 20rem),
+    linear-gradient(90deg, transparent 0 76%, rgba(16, 35, 31, 0.045) 76% 76.08%, transparent 76.08% 100%);
 }
 
 a {
@@ -47,8 +59,8 @@ a {
   align-items: center;
   gap: 20px;
   padding: 14px max(18px, calc((100vw - 1740px) / 2 + 18px));
-  border-bottom: 1px solid rgba(23, 33, 31, 0.11);
-  background: rgba(243, 239, 230, 0.88);
+  border-bottom: 1px solid rgba(16, 35, 31, 0.12);
+  background: rgba(233, 238, 230, 0.88);
   backdrop-filter: blur(18px);
 }
 
@@ -88,7 +100,7 @@ a {
 .nav-links a:focus-visible,
 .nav-links a[aria-current="page"] {
   color: var(--forest);
-  background: rgba(31, 107, 87, 0.08);
+  background: rgba(21, 95, 74, 0.09);
   outline: none;
 }
 
@@ -166,7 +178,7 @@ h2 {
   justify-content: center;
   align-items: center;
   min-height: 44px;
-  border: 1px solid rgba(23, 33, 31, 0.14);
+  border: 1px solid rgba(16, 35, 31, 0.14);
   border-radius: 999px;
   padding: 0 16px;
   font-size: 0.78rem;
@@ -191,15 +203,15 @@ h2 {
 
 .button-secondary {
   color: var(--forest);
-  background: rgba(255, 250, 240, 0.86);
+  background: rgba(251, 247, 236, 0.86);
 }
 
 .controls,
 .chart-card,
 .reading-panel {
-  border: 1px solid rgba(23, 33, 31, 0.12);
+  border: 1px solid rgba(16, 35, 31, 0.12);
   border-radius: 12px;
-  background: rgba(255, 250, 240, 0.92);
+  background: rgba(251, 247, 236, 0.92);
   box-shadow: var(--shadow);
 }
 
@@ -232,7 +244,7 @@ select {
   border-radius: 8px;
   padding: 0 12px;
   color: var(--ink);
-  background: #fffdf8;
+  background: #fbf9f1;
   font: inherit;
   font-size: 1rem;
   font-weight: 900;
@@ -245,7 +257,7 @@ select {
   max-height: 286px;
   overflow-y: auto;
   padding-right: 6px;
-  scrollbar-color: rgba(31, 107, 87, 0.42) rgba(216, 207, 189, 0.38);
+  scrollbar-color: rgba(21, 95, 74, 0.42) rgba(199, 208, 196, 0.42);
   scrollbar-width: thin;
 }
 
@@ -260,7 +272,7 @@ select {
 
 .country-grid::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: rgba(31, 107, 87, 0.42);
+  background: rgba(21, 95, 74, 0.42);
 }
 
 .country-chip {
@@ -269,7 +281,7 @@ select {
   border-radius: 8px;
   padding: 0 8px;
   color: var(--muted);
-  background: #fffdf8;
+  background: #fbf9f1;
   font: inherit;
   font-size: 0.88rem;
   font-weight: 900;
@@ -366,7 +378,7 @@ select {
 .dim-legend,
 .selected-panel {
   padding: 22px;
-  background: rgba(255, 250, 240, 0.92);
+  background: rgba(251, 247, 236, 0.92);
 }
 
 .dim-legend {
@@ -378,12 +390,12 @@ select {
   grid-template-columns: 12px minmax(0, 1fr);
   gap: 8px 10px;
   width: 100%;
-  border: 1px solid rgba(23, 33, 31, 0.08);
+  border: 1px solid rgba(16, 35, 31, 0.08);
   border-radius: 8px;
   padding: 10px;
   margin-top: 8px;
   color: var(--ink);
-  background: rgba(255, 253, 248, 0.68);
+  background: rgba(251, 249, 241, 0.7);
   font: inherit;
   font-size: 0.88rem;
   font-weight: 900;
@@ -394,13 +406,13 @@ select {
 
 .dim-legend-row:hover {
   transform: translateX(2px);
-  border-color: rgba(31, 107, 87, 0.22);
-  background: rgba(255, 253, 248, 0.92);
+  border-color: rgba(21, 95, 74, 0.22);
+  background: rgba(251, 249, 241, 0.92);
 }
 
 .dim-legend-row.is-active {
-  border-color: rgba(31, 107, 87, 0.32);
-  background: rgba(31, 107, 87, 0.08);
+  border-color: rgba(21, 95, 74, 0.32);
+  background: rgba(21, 95, 74, 0.09);
 }
 
 .dim-dot {
@@ -430,10 +442,10 @@ select {
 }
 
 .detail-card {
-  border: 1px solid rgba(23, 33, 31, 0.08);
+  border: 1px solid rgba(16, 35, 31, 0.08);
   border-radius: 8px;
   padding: 12px;
-  background: #fffdf8;
+  background: #fbf9f1;
 }
 
 .detail-card-head {
@@ -470,7 +482,7 @@ select {
   gap: 1px;
   margin: 10px 0 0;
   overflow: hidden;
-  border: 1px solid rgba(23, 33, 31, 0.08);
+  border: 1px solid rgba(16, 35, 31, 0.08);
   border-radius: 7px;
   background: rgba(216, 207, 189, 0.7);
 }
@@ -508,15 +520,15 @@ select {
   border-radius: 8px;
   padding: 14px;
   color: var(--muted);
-  background: rgba(255, 253, 248, 0.62);
+  background: rgba(251, 249, 241, 0.64);
   font-size: 0.9rem;
   font-weight: 800;
   line-height: 1.4;
 }
 
 .wheel-core {
-  fill: rgba(255, 250, 240, 0.96);
-  stroke: rgba(23, 33, 31, 0.12);
+  fill: rgba(251, 247, 236, 0.96);
+  stroke: rgba(16, 35, 31, 0.12);
   stroke-width: 1.2;
   filter: drop-shadow(0 18px 36px rgba(28, 38, 34, 0.14));
 }
@@ -543,7 +555,7 @@ select {
 }
 
 .pressure-segment {
-  stroke: rgba(255, 253, 248, 0.5);
+  stroke: rgba(251, 249, 241, 0.52);
   stroke-width: 0.85;
   cursor: pointer;
   transition: opacity 0.14s ease, filter 0.14s ease;
@@ -610,7 +622,7 @@ select {
 }
 
 .fp-tooltip {
-  position: fixed;
+  position: absolute;
   z-index: 999;
   min-width: 190px;
   padding: 12px 16px;

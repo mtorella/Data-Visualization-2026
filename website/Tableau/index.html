@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tableau Dashboard | Who Pollutes, Who Pays?</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../Home/" aria-label="Who Pollutes, Who Pays home">
+        <span>Who pollutes,</span>
+        <strong>who pays?</strong>
+      </a>
+      <nav class="nav-links" aria-label="Project pages">
+        <a href="../Home/">Home</a>
+        <a href="../Python/">Python</a>
+        <a aria-current="page" href="./">Tableau</a>
+        <a href="../Country_profile_card/">Profile</a>
+        <a href="../Pressure_wheel/">Pressure wheel</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="topbar" aria-labelledby="page-title">
+        <div class="title-block">
+          <p class="eyebrow">Tableau / Interactive dashboard</p>
+          <h1 id="page-title">Dashboard space</h1>
+          <p class="lede">
+            A linked Tableau dashboard for broad country exploration, filtering,
+            and context before moving into the JavaScript explanatory views.
+          </p>
+          <div class="page-actions" aria-label="Page navigation">
+            <a class="button button-secondary" href="../Home/">Back to project home</a>
+            <a class="button button-primary" href="../Country_profile_card/">Next: country profile</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-shell" aria-labelledby="dashboard-title">
+        <header class="dashboard-header">
+          <div>
+            <p class="eyebrow">Tableau view</p>
+            <h2 id="dashboard-title">Country-level climate dashboard</h2>
+            <p>
+              Use the embedded dashboard to inspect patterns across countries,
+              then move to the JavaScript views for profile-level explanation
+              and the creative pressure-wheel representation.
+            </p>
+          </div>
+
+          <aside class="dashboard-note" aria-label="How to use this dashboard">
+            <span>How to read</span>
+            <strong>Filter, compare, then diagnose</strong>
+            <p>
+              Tableau supports the broad dashboard layer of the project; the
+              JavaScript pages provide the focused explanatory and creative views.
+            </p>
+          </aside>
+        </header>
+
+        <div class="embed-frame">
+          <div class="tableauPlaceholder" id="viz1778342582099">
+            <noscript>
+              <a href="#">
+                <img
+                  alt="Tableau dashboard"
+                  src="https://public.tableau.com/static/images/HQ/HQY87GK27/1_rss.png"
+                >
+              </a>
+            </noscript>
+            <object class="tableauViz">
+              <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
+              <param name="embed_code_version" value="3">
+              <param name="path" value="shared/HQY87GK27">
+              <param name="toolbar" value="yes">
+              <param name="static_image" value="https://public.tableau.com/static/images/HQ/HQY87GK27/1.png">
+              <param name="animate_transition" value="yes">
+              <param name="display_static_image" value="yes">
+              <param name="display_spinner" value="yes">
+              <param name="display_overlay" value="yes">
+              <param name="display_count" value="yes">
+              <param name="language" value="it-IT">
+              <param name="filter" value="publish=yes">
+            </object>
+          </div>
+        </div>
+
+        <footer class="dashboard-footer">
+          <p>
+            Embedded from Tableau Public. If the dashboard does not load, open it
+            in a browser with internet access and allow Tableau Public scripts.
+          </p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
