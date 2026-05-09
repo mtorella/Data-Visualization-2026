@@ -234,6 +234,50 @@
         </ol>
       </section>
 
+      <section id="annotated-snapshot" class="section-card plotly-section">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Explanatory view · 2021</p>
+            <h2>Reading the chart: five stories in one picture</h2>
+          </div>
+          <p class="section-note">
+            A guided snapshot for 2021. Each callout points to a cluster worth
+            knowing — no prior data experience needed.
+          </p>
+        </div>
+
+        <article class="plotly-showcase" aria-labelledby="snapshot-title">
+          <div class="plotly-copy">
+            <h3 id="snapshot-title">What does the chart show?</h3>
+            <p>
+              Every bubble is a country in 2021. Move right → richer country.
+              Move up → more GHG per person. Bigger bubble → larger population.
+              Color shows the world region.
+            </p>
+            <p>
+              Five callouts highlight the most important patterns. You can still
+              hover on any bubble to read the exact figures for that country.
+            </p>
+            <ul style="padding-left:1.2em; line-height:1.8">
+              <li><strong>Top right</strong> — fossil-fuel exporters: rich and very heavy emitters.</li>
+              <li><strong>Right, mid-height</strong> — USA, Canada, Australia: wealthy but fossil-heavy.</li>
+              <li><strong>Right, low</strong> — Western Europe: similar wealth, far lower emissions.</li>
+              <li><strong>Middle</strong> — emerging economies: wide spread in both dimensions.</li>
+              <li><strong>Bottom left</strong> — low-income countries: minimal emissions, limited access.</li>
+            </ul>
+            <a class="button button-secondary" href="scatter_2021_annotated.html">Open full-screen version</a>
+          </div>
+
+          <div class="plotly-frame-wrap">
+            <iframe
+              class="plotly-frame"
+              src="scatter_2021_annotated.html"
+              title="Annotated scatter chart showing GHG emissions vs GDP per capita for 2021 with callout annotations"
+            ></iframe>
+          </div>
+        </article>
+      </section>
+
       <section id="scatter-timeline" class="section-card plotly-section">
         <div class="section-heading split-heading">
           <div>
@@ -250,14 +294,17 @@
           <div class="plotly-copy">
             <h3 id="plotly-title">GHG versus wealth over time</h3>
             <p>
-              Each dot is a country. Horizontal position shows GDP per capita,
-              vertical position shows GHG emissions per capita, color reinforces
-              emissions intensity, and dot size represents population.
+              Each dot is a country. Horizontal position shows GDP per capita
+              on a log scale — so equal distances represent equal percentage
+              differences in wealth, not equal dollar amounts. Vertical position
+              shows GHG emissions per capita, color reinforces emissions
+              intensity, and dot size represents population (capped at 350 million
+              so large nations like China and India don't collapse the scale).
             </p>
             <p>
-              The vertical axis is capped at 25 t CO2e per person so the main
-              country pattern stays readable. A few extreme outliers above that
-              value are intentionally clipped.
+              The vertical axis is capped at 35 t CO₂e per person to keep the
+              main country pattern readable. Brunei, the highest emitter in
+              the dataset (~34 t in 2020–2021), sits just below the ceiling.
             </p>
             <p>
               Use the year slider or play button inside the chart. Hover on a
