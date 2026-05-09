@@ -257,8 +257,9 @@ h3 {
 .hero::after {
   content: "2014 / 2023";
   position: absolute;
-  right: clamp(0px, 4vw, 42px);
-  top: 22px;
+  left: clamp(0px, 4vw, 90px);
+  right: auto;
+  top: 0;
   color: rgba(97, 112, 108, 0.12);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(3.6rem, 8vw, 8rem);
