@@ -92,8 +92,11 @@ The notebook will produce `data/df_panel.csv` if not already present: the full j
 
 ### Project Website
 
-The finished webpage lives in `website/` and is split into one home page plus four visualization pages.
-Because the JavaScript pages fetch local files, run the site through a small local web server from the repository root:
+The live site is hosted on GitHub Pages and can be visited directly at:
+
+**https://mtorella.github.io/Data-Visualisation-2026/**
+
+To run it locally, the JavaScript pages fetch CSV files so they need a small web server from the repository root (opening the HTML files directly via `file://` will not work):
 
 ```bash
 python3 -m http.server 8000
