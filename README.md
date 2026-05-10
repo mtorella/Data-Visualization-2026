@@ -19,14 +19,16 @@ No internet connection is required: all data files are bundled locally in `data/
 
 ```
 Data-Visualisation-2026/
-├── data/                              # Raw source files (not modified)
-│   ├── OECD.csv                       # OECD GHG emissions per capita
-│   ├── API_5_DS2_en_csv_v2_5693.csv   # World Bank raw export — energy & mining
-│   ├── API_3_DS2_en_csv_v2_17489.csv  # World Bank raw export — economy & growth
-│   ├── WB_WDI_SP_POP_TOTL.csv         # World Bank raw export — population
+├── data/
+│   ├── raw_data/                      # Original source files (not modified)
+│   │   ├── OECD.csv                   # OECD GHG emissions per capita
+│   │   ├── API_5_DS2_en_csv_v2_5693.csv  # World Bank raw export — energy & mining
+│   │   ├── API_3_DS2_en_csv_v2_17489.csv # World Bank raw export — economy & growth
+│   │   └── WB_WDI_SP_POP_TOTL.csv    # World Bank raw export — population
 │   ├── energy-and-mining-2025.csv     # Cleaned energy data (output of clean_data.py)
 │   ├── economy-and-growth-2025.csv    # Cleaned economy data (output of clean_data.py)
-│   └── population-2025.csv           # Cleaned population data (output of clean_data.py)
+│   ├── population-2025.csv            # Cleaned population data (output of clean_data.py)
+│   └── df_panel.csv                   # Output: full joined panel (2014–2023)
 ├── utils/
 │   └── clean_data.py                  # Converts raw World Bank exports to analysis-ready CSVs
 ├── preprocessing.ipynb                # Main pipeline: cleaning, joining, EDA
@@ -36,7 +38,6 @@ Data-Visualisation-2026/
 │   ├── Tableau/                       # Embedded Tableau dashboard
 │   ├── Country_profile_card/          # JavaScript explanatory country profile
 │   └── Pressure_wheel/                # D3.js creative pressure-wheel visualization
-├── df_panel.csv                       # Output: full joined panel (2014–2023)
 └── README.md
 ```
 ---
@@ -61,9 +62,9 @@ It processes three files in sequence:
 
 | Input (raw) | Output (cleaned) |
 |---|---|
-| `data/API_5_DS2_en_csv_v2_5693.csv` | `data/energy-and-mining-2025.csv` |
-| `data/API_3_DS2_en_csv_v2_17489.csv` | `data/economy-and-growth-2025.csv` |
-| `data/WB_WDI_SP_POP_TOTL.csv` | `data/population-2025.csv` |
+| `data/raw_data/API_5_DS2_en_csv_v2_5693.csv` | `data/energy-and-mining-2025.csv` |
+| `data/raw_data/API_3_DS2_en_csv_v2_17489.csv` | `data/economy-and-growth-2025.csv` |
+| `data/raw_data/WB_WDI_SP_POP_TOTL.csv` | `data/population-2025.csv` |
 
 **You only need to run this script if you have re-downloaded the raw World Bank files.** The cleaned CSVs are already included in the repository. To re-run it:
 
@@ -78,7 +79,7 @@ Run it from the project root before opening the notebook.
 ## How to Run
 
 1. Clone or download the repository.
-2. Make sure all four raw files are present inside the `data/` folder (see structure above).
+2. Make sure all four raw files are present inside the `data/raw_data/` folder (see structure above).
 3. Open `preprocessing.ipynb` in Jupyter:
 
 ```bash
@@ -87,7 +88,7 @@ jupyter notebook preprocessing.ipynb
 
 4. Run all cells top to bottom via **Kernel → Restart & Run All**.
 
-The notebook will produce an output CSV files in the project root if not alaready present: `df_panel.csv`, the full joined panel (789 rows × 11 columns).
+The notebook will produce `data/df_panel.csv` if not already present: the full joined panel (789 rows × 11 columns).
 
 ### Project Website
 

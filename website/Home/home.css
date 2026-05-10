@@ -780,6 +780,38 @@ h3 {
   background: conic-gradient(var(--coral), var(--blue), var(--gold), var(--forest), var(--coral));
 }
 
+.visual-badge {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.visual-badge img {
+  display: block;
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35));
+}
+
+.visual-badge-python img {
+  transform: translate(2px, 5px);
+}
+
+.visual-badge-javascript img {
+  width: 124px;
+  height: 124px;
+}
+
 .visual-card:hover {
   z-index: 1;
   transform: translateY(-4px);

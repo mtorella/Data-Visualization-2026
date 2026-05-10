@@ -2,7 +2,7 @@
 
 // ── Config ────────────────────────────────────────────────────────────────────
 
-const DATA_URL = "../df_panel.csv";
+const DATA_URL = "../../data/df_panel.csv";
 const YEARS    = [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
 
 const REGION_COLOR = {

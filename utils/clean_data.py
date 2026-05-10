@@ -1,6 +1,6 @@
 import pandas as pd
 
-INPUT_FILE  = "data/API_5_DS2_en_csv_v2_5693.csv"
+INPUT_FILE  = "data/raw_data/API_5_DS2_en_csv_v2_5693.csv"
 OUTPUT_FILE = "data/energy-and-mining-2025.csv"
 
 # STEP 1: Load  
@@ -47,7 +47,7 @@ df_wide.to_csv(OUTPUT_FILE, index=False)
 # ---------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------
 
-INPUT_FILE  = "data/API_3_DS2_en_csv_v2_17489.csv"
+INPUT_FILE  = "data/raw_data/API_3_DS2_en_csv_v2_17489.csv"
 OUTPUT_FILE = "data/economy-and-growth-2025.csv"
 
 # STEP 1: Load
@@ -98,7 +98,7 @@ df_wide.to_csv(OUTPUT_FILE, index=False)
 # ---------------------------------------------------------------------------------------
 # ---------------------------------------------------------------------------------------
 
-INPUT_FILE  = "data/WB_WDI_SP_POP_TOTL.csv"
+INPUT_FILE  = "data/raw_data/WB_WDI_SP_POP_TOTL.csv"
 OUTPUT_FILE = "data/population-2025.csv"
 
 # STEP 1: Load — already in long format (one row per country-year)

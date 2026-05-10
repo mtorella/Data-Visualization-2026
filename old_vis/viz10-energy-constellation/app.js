@@ -1,6 +1,6 @@
 "use strict";
 
-const PANEL_URL = "../df_panel.csv";
+const PANEL_URL = "../../data/df_panel.csv";
 const SLOPE_URL = "../df_slope.csv";
 const DEFAULT_YEAR = 2021;
 const DEFAULT_LENS = 58;

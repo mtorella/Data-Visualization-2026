@@ -1,6 +1,6 @@
 "use strict";
 
-const DATA_URL = "../df_panel.csv";
+const DATA_URL = "../../data/df_panel.csv";
 const DEFAULT_YEAR = 2021;
 const MAX_COUNTRIES = 4;
 
