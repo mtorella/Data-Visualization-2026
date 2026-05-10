@@ -119,17 +119,21 @@ p {
 .shell {
   width: min(1480px, calc(100% - 36px));
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 34px 0;
 }
 
 .topbar {
-  display: block;
-  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: clamp(24px, 3vw, 44px);
+  align-items: start;
+  margin-bottom: 20px;
 }
 
 .title-block {
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  max-width: 980px;
 }
 
 .eyebrow {
@@ -157,18 +161,18 @@ h2 {
 }
 
 .lede {
-  max-width: 790px;
+  max-width: 700px;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.05rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .page-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .button {
@@ -213,11 +217,8 @@ h2 {
 }
 
 .dashboard-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-  gap: clamp(18px, 3vw, 42px);
-  align-items: end;
-  padding: clamp(24px, 3vw, 42px);
+  display: block;
+  padding: clamp(24px, 3vw, 34px) clamp(28px, 3vw, 46px) 20px;
   border-bottom: 1px solid var(--line);
   background:
     radial-gradient(circle at 95% 20%, rgba(200, 154, 50, 0.16), transparent 15rem),
@@ -226,15 +227,16 @@ h2 {
 }
 
 .dashboard-header p {
-  max-width: 800px;
+  max-width: 940px;
   margin-bottom: 0;
+  line-height: 1.52;
 }
 
 .dashboard-note {
   position: relative;
   display: grid;
-  gap: 8px;
-  padding: 18px;
+  gap: 10px;
+  padding: 20px 20px 18px;
   border: 1px solid rgba(21, 95, 74, 0.17);
   border-radius: 8px;
   background:
@@ -256,9 +258,18 @@ h2 {
   text-transform: uppercase;
 }
 
-.dashboard-note p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
+.note-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.45;
+}
+
+.note-list li::marker {
+  color: var(--forest);
 }
 
 .embed-frame {
@@ -324,8 +335,12 @@ h2 {
     justify-content: flex-start;
   }
 
-  .dashboard-header {
+  .topbar {
     grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    padding-bottom: 18px;
   }
 
   .page-actions {

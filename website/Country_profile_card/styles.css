@@ -587,6 +587,14 @@ h3 {
   gap: 7px;
 }
 
+.chart-legend-note {
+  margin-left: auto;
+  padding-top: 6px;
+  color: color-mix(in srgb, var(--muted) 88%, white 12%);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
 .chart-legend i {
   width: 26px;
   height: 4px;
@@ -675,6 +683,17 @@ h3 {
   stroke-width: 1.5;
 }
 
+.profile-axis-tick {
+  stroke: rgba(97, 112, 108, 0.24);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+.profile-axis-tick.is-baseline {
+  stroke: rgba(21, 95, 74, 0.42);
+  stroke-width: 1.8;
+}
+
 .profile-area-country {
   fill: rgba(200, 95, 73, 0.22);
   stroke: var(--coral);
@@ -707,7 +726,6 @@ h3 {
   stroke-width: 1.5;
 }
 
-.profile-ring-label,
 .profile-axis-label,
 .profile-axis-value,
 .profile-axis-delta,
@@ -726,7 +744,6 @@ h3 {
 }
 
 .profile-axis-value,
-.profile-ring-label,
 .reading-copy {
   font-size: 15px;
 }

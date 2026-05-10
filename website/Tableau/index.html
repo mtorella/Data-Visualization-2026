@@ -27,36 +27,39 @@
           <p class="eyebrow">Tableau / Interactive dashboard</p>
           <h1 id="page-title">Dashboard space</h1>
           <p class="lede">
-            A linked Tableau dashboard for broad country exploration, filtering,
-            and context before moving into the JavaScript explanatory views.
+            A first wide look across the field: who emits most per person,
+            where total emissions concentrate, and which low-emission countries
+            look sustainable only because far less energy is available.
           </p>
           <div class="page-actions" aria-label="Page navigation">
             <a class="button button-secondary" href="../Home/">Back to project home</a>
             <a class="button button-primary" href="../Country_profile_card/">Next: country profile</a>
           </div>
         </div>
+
+        <aside class="dashboard-note" aria-label="How to use this dashboard">
+          <span>Reading path</span>
+          <strong>Read across the four views</strong>
+          <ul class="note-list">
+            <li>Use the map and race chart to spot the countries that dominate emissions per person.</li>
+            <li>Use the regional ranking to see how per-capita stories differ from total-footprint concentration.</li>
+            <li>Use the scatter to ask whether “green” countries are green by transition, or green by poverty.</li>
+          </ul>
+        </aside>
       </section>
 
       <section class="dashboard-shell" aria-labelledby="dashboard-title">
         <header class="dashboard-header">
           <div>
             <p class="eyebrow">Tableau view</p>
-            <h2 id="dashboard-title">Country-level climate dashboard</h2>
+            <h2 id="dashboard-title">Who rises to the top, and why?</h2>
             <p>
-              Use the embedded dashboard to inspect patterns across countries,
-              then move to the JavaScript views for profile-level explanation
-              and the creative pressure-wheel representation.
+              Read the page as a set of linked comparisons: the map spreads the
+              pattern across space, the ranking exposes the highest per-capita
+              emitters, the regional view shifts to total footprint, and the
+              scatter separates cleaner transitions from low-energy constraint.
             </p>
           </div>
-
-          <aside class="dashboard-note" aria-label="How to use this dashboard">
-            <span>How to read</span>
-            <strong>Filter, compare, then diagnose</strong>
-            <p>
-              Tableau supports the broad dashboard layer of the project; the
-              JavaScript pages provide the focused explanatory and creative views.
-            </p>
-          </aside>
         </header>
 
         <div class="embed-frame">
@@ -88,8 +91,8 @@
 
         <footer class="dashboard-footer">
           <p>
-            Embedded from Tableau Public. If the dashboard does not load, open it
-            in a browser with internet access and allow Tableau Public scripts.
+            Embedded from Tableau Public. If it does not load, open the page
+            with internet access and allow Tableau Public scripts.
           </p>
         </footer>
       </section>

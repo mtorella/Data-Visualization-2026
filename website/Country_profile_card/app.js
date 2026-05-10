@@ -108,12 +108,13 @@ els.countryInput.addEventListener("keydown", (event) => {
 });
 
 els.countryToggle.addEventListener("click", () => {
-  els.countryInput.focus();
-  if (state.countryMenuOpen) {
+  const wasOpen = state.countryMenuOpen;
+  if (wasOpen) {
     closeCountryMenu();
   } else {
     renderCountryOptions("");
     openCountryMenu();
+    els.countryInput.focus();
   }
 });
 
@@ -163,12 +164,13 @@ els.yearInput.addEventListener("keydown", (event) => {
 });
 
 els.yearToggle.addEventListener("click", () => {
-  els.yearInput.focus();
-  if (state.yearMenuOpen) {
+  const wasOpen = state.yearMenuOpen;
+  if (wasOpen) {
     closeYearMenu();
   } else {
     renderYearOptions("");
     openYearMenu();
+    els.yearInput.focus();
   }
 });
 
@@ -264,14 +266,14 @@ function renderTrend(row) {
         country,
         region,
         global,
-        countryDelta: percentDifference(country, region),
-        globalDelta: percentDifference(global, region),
+        regionDelta: percentDifference(country, region),
+        globalDelta: percentDifference(country, global),
       };
     })
-    .filter((item) => isFiniteNumber(item.countryDelta));
+    .filter((item) => isFiniteNumber(item.regionDelta) || isFiniteNumber(item.globalDelta));
   const maxAbs = Math.max(
     20,
-    ...series.flatMap((item) => [Math.abs(item.countryDelta), Math.abs(item.globalDelta || 0)])
+    ...series.flatMap((item) => [Math.abs(item.regionDelta || 0), Math.abs(item.globalDelta || 0)])
   ) * 1.15;
   const chartWidth = width - margin.left - margin.right;
   const step = chartWidth / years.length;
@@ -297,15 +299,16 @@ function renderTrend(row) {
   const bars = series
     .map((item) => {
       const isSelected = item.year === row.year;
-      const top = Math.min(y(item.countryDelta), baseline);
-      const heightValue = Math.abs(y(item.countryDelta) - baseline);
-      const className = item.countryDelta >= 0 ? "gap-bar is-above" : "gap-bar is-below";
+      const barDelta = item.regionDelta;
+      const top = isFiniteNumber(barDelta) ? Math.min(y(barDelta), baseline) : baseline;
+      const heightValue = isFiniteNumber(barDelta) ? Math.abs(y(barDelta) - baseline) : 0;
+      const className = barDelta >= 0 ? "gap-bar is-above" : "gap-bar is-below";
       const globalY = isFiniteNumber(item.globalDelta) ? y(item.globalDelta) : null;
 
       return `
-        <rect class="${className}${isSelected ? " is-selected" : ""}" x="${round(x(item.year) - barWidth / 2)}" y="${round(top)}" width="${round(barWidth)}" height="${round(Math.max(2, heightValue))}" rx="7"></rect>
-        ${globalY ? `<rect class="global-gap-marker" x="${round(x(item.year) - barWidth / 2)}" y="${round(globalY - 2)}" width="${round(barWidth)}" height="4" rx="2"></rect>` : ""}
-        ${isSelected ? `<text class="selected-gap-label" x="${round(x(item.year))}" y="${item.countryDelta >= 0 ? round(top - 10) : round(top + heightValue + 20)}" text-anchor="middle">${signedPercent(item.countryDelta)}</text>` : ""}
+        ${isFiniteNumber(barDelta) ? `<rect class="${className}${isSelected ? " is-selected" : ""}" x="${round(x(item.year) - barWidth / 2)}" y="${round(top)}" width="${round(barWidth)}" height="${round(Math.max(2, heightValue))}" rx="7"></rect>` : ""}
+        ${globalY !== null ? `<rect class="global-gap-marker" x="${round(x(item.year) - barWidth / 2)}" y="${round(globalY - 2)}" width="${round(barWidth)}" height="4" rx="2"></rect>` : ""}
+        ${isSelected && isFiniteNumber(barDelta) ? `<text class="selected-gap-label" x="${round(x(item.year))}" y="${barDelta >= 0 ? round(top - 10) : round(top + heightValue + 20)}" text-anchor="middle">${signedPercent(barDelta)}</text>` : ""}
       `;
     })
     .join("");
@@ -315,18 +318,19 @@ function renderTrend(row) {
     .join("");
 
   els.trendChart.innerHTML = `
-    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(row.country_name_ghg)} yearly emissions gap versus regional average">
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(row.country_name_ghg)} yearly emissions gap versus regional and global averages">
       ${grid}
       <line class="gap-baseline" x1="${margin.left}" y1="${baseline}" x2="${width - margin.right}" y2="${baseline}"></line>
       ${bars}
       ${yearLabels}
-      <text class="chart-note" x="${margin.left}" y="22">Country GHG per capita gap versus regional average</text>
-      <text class="chart-note" x="${width - margin.right}" y="22" text-anchor="end">Gold hash = global average gap</text>
+      <text class="chart-note" x="${margin.left}" y="22">Bars = country GHG per capita gap versus regional average</text>
+      <text class="chart-note" x="${width - margin.right}" y="22" text-anchor="end">Gold hash = country gap versus global average</text>
     </svg>
     <div class="chart-legend" aria-hidden="true">
       <span><i class="above-swatch"></i>Above region</span>
       <span><i class="below-swatch"></i>Below region</span>
-      <span><i class="global-swatch"></i>Global avg</span>
+      <span><i class="global-swatch"></i>Country vs global</span>
+      <span class="chart-legend-note">0% = equal to the benchmark used by that mark</span>
     </div>
   `;
 }
@@ -336,30 +340,25 @@ function renderInsights(row) {
     .filter((item) => isFiniteNumber(item.ghg_per_capita) && item.year <= row.year)
     .sort((a, b) => a.year - b.year);
   const firstRow = countryRows[0];
-  const trendDelta = firstRow ? percentDifference(row.ghg_per_capita, firstRow.ghg_per_capita) : null;
   const regionGhg = averageFor(row.year, row.region, "ghg_per_capita");
   const globalGhg = averageFor(row.year, null, "ghg_per_capita");
-  const totalRegion = averageFor(row.year, row.region, "ghg_total_mt");
-  const gdpRegion = averageFor(row.year, row.region, "gdp_per_capita_ppp");
+  const currentGlobalDelta = percentDifference(row.ghg_per_capita, globalGhg);
+  const currentRegionDelta = percentDifference(row.ghg_per_capita, regionGhg);
+  const firstRegionGhg = firstRow ? averageFor(firstRow.year, row.region, "ghg_per_capita") : null;
+  const firstGlobalGhg = firstRow ? averageFor(firstRow.year, null, "ghg_per_capita") : null;
+  const firstRegionDelta = firstRow ? percentDifference(firstRow.ghg_per_capita, firstRegionGhg) : null;
+  const firstGlobalDelta = firstRow ? percentDifference(firstRow.ghg_per_capita, firstGlobalGhg) : null;
 
   const insights = [
     {
       title: "Intensity",
-      body: isFiniteNumber(globalGhg)
-        ? `${row.country_name_ghg} is ${signedPercent(percentDifference(row.ghg_per_capita, globalGhg))} relative to the global average for emissions per person.`
-        : "There is not enough global comparison data for this year.",
+      body: isFiniteNumber(currentGlobalDelta) && isFiniteNumber(currentRegionDelta)
+        ? `${row.country_name_ghg} is ${signedPercent(currentGlobalDelta)} relative to the global average and ${signedPercent(currentRegionDelta)} relative to its regional average for emissions per person.`
+        : "There is not enough comparison data for this year.",
     },
     {
       title: "Direction",
-      body: isFiniteNumber(trendDelta)
-        ? `Since ${firstRow.year}, emissions per person have ${trendDelta <= 0 ? "fallen" : "risen"} by ${formatNumber(Math.abs(trendDelta), 0)}%.`
-        : "The time series is too short to describe a direction.",
-    },
-    {
-      title: "Scale",
-      body: isFiniteNumber(row.ghg_total_mt) && isFiniteNumber(totalRegion)
-        ? `Its total footprint is ${signedPercent(percentDifference(row.ghg_total_mt, totalRegion))} versus the regional average, while GDP per person is ${signedPercent(percentDifference(row.gdp_per_capita_ppp, gdpRegion))}.`
-        : "Total footprint or GDP comparison data is missing for this row.",
+      body: describeDualGapChange(firstRow, firstRegionDelta, currentRegionDelta, firstGlobalDelta, currentGlobalDelta),
     },
   ];
 
@@ -413,26 +412,39 @@ function renderMetrics(row) {
       })
       .join(" ");
   };
-  const rings = [0.5, 1, maxRatio]
-    .map((ratio) => {
+  const ringLevels = [
+    { ratio: 0.5, className: "profile-ring" },
+    { ratio: 1, className: "profile-baseline-ring" },
+    { ratio: maxRatio, className: "profile-ring" },
+  ];
+  const rings = ringLevels
+    .map(({ ratio, className }) => {
       const points = profileMetrics
         .map((metric) => {
           const point = polarPoint(metric.angle, scaleRatio(ratio) * radius, centerX, centerY);
           return `${point.x},${point.y}`;
         })
         .join(" ");
-      const label = ratio === 1 ? "Region = 100%" : "";
-      const labelPoint = polarPoint(-Math.PI / 2, scaleRatio(ratio) * radius, centerX, centerY);
-      return `
-        <polygon class="${ratio === 1 ? "profile-baseline-ring" : "profile-ring"}" points="${points}"></polygon>
-        ${label ? `<text class="profile-ring-label" x="${labelPoint.x + 18}" y="${labelPoint.y + 6}">${label}</text>` : ""}
-      `;
+      return `<polygon class="${className}" points="${points}"></polygon>`;
     })
     .join("");
   const axes = profileMetrics
     .map((metric) => {
       const end = polarPoint(metric.angle, radius + 18, centerX, centerY);
       return `<line class="profile-axis-spoke" x1="${centerX}" y1="${centerY}" x2="${end.x}" y2="${end.y}"></line>`;
+    })
+    .join("");
+  const tickLevels = [0.5, 1, 1.5, 2];
+  const axisTicks = tickLevels
+    .flatMap((ratio) => {
+      const tickRadius = scaleRatio(ratio) * radius;
+      return profileMetrics.map((metric) => {
+        const point = polarPoint(metric.angle, tickRadius, centerX, centerY);
+        const tickLength = ratio === 1 ? 12 : 8;
+        const dx = Math.cos(metric.angle + Math.PI / 2) * tickLength / 2;
+        const dy = Math.sin(metric.angle + Math.PI / 2) * tickLength / 2;
+        return `<line class="profile-axis-tick${ratio === 1 ? " is-baseline" : ""}" x1="${round(point.x - dx)}" y1="${round(point.y - dy)}" x2="${round(point.x + dx)}" y2="${round(point.y + dy)}"></line>`;
+      });
     })
     .join("");
   const calloutPositions = [
@@ -478,6 +490,7 @@ function renderMetrics(row) {
       <polygon class="profile-area-global" points="${pointsFor("globalRatio")}"></polygon>
       <polygon class="profile-area-region" points="${pointsFor("regionRatio")}"></polygon>
       <polygon class="profile-area-country" points="${pointsFor("countryRatio")}"></polygon>
+      ${axisTicks}
       ${vertices}
       <g class="profile-radar-legend" transform="translate(850 165)">
         <text class="reading-title" x="0" y="0">How to read</text>
@@ -695,9 +708,19 @@ function parseCsv(text) {
 
 function describeEmissions(delta) {
   if (!isFiniteNumber(delta)) return "Comparable profile";
-  if (delta >= 25) return "High emitter";
-  if (delta <= -25) return "Below-average emitter";
+  if (delta >= 40) return "Far above global average";
+  if (delta >= 15) return "Above global average";
+  if (delta <= -40) return "Far below global average";
+  if (delta <= -15) return "Below global average";
   return "Near global average";
+}
+
+function describeDualGapChange(firstRow, firstRegionDelta, currentRegionDelta, firstGlobalDelta, currentGlobalDelta) {
+  if (!firstRow || !isFiniteNumber(firstRegionDelta) || !isFiniteNumber(currentRegionDelta) || !isFiniteNumber(firstGlobalDelta) || !isFiniteNumber(currentGlobalDelta)) {
+    return "The time series is too short to describe a direction.";
+  }
+
+  return `Since ${firstRow.year}, its gap versus the regional average has shifted from ${signedPercent(firstRegionDelta)} to ${signedPercent(currentRegionDelta)}, while its gap versus the global average has moved from ${signedPercent(firstGlobalDelta)} to ${signedPercent(currentGlobalDelta)}.`;
 }
 
 function percentDifference(value, baseline) {

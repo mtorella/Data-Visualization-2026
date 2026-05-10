@@ -81,6 +81,7 @@ d3.csv(DATA_URL, coerceRow).then((rows) => {
   state.rows = rows;
   state.years = [...new Set(rows.map((row) => row.year))].sort((a, b) => a - b);
   state.countries = getCountries(rows);
+  syncSelectedCountries();
   buildAxisLegend();
   populateYears();
   renderChips();
@@ -89,6 +90,7 @@ d3.csv(DATA_URL, coerceRow).then((rows) => {
 
 els.yearSelect.addEventListener("change", () => {
   state.selectedYear = Number(els.yearSelect.value);
+  syncSelectedCountries();
   renderChips();
   render();
 });
@@ -145,7 +147,7 @@ function populateYears() {
 
 function renderChips() {
   const yearRows = rowsInYear(state.selectedYear);
-  const chips = state.countries
+  const chips = getCountries(yearRows)
     .map((country) => {
       const row = yearRows.find((item) => item.country_name_ghg === country.name);
       const complete = row && variables.every((variable) => Number.isFinite(row[variable.key]));
@@ -164,6 +166,11 @@ function renderChips() {
       title="${country.complete ? "Complete data for all four dimensions" : "One or more dimensions missing this year"}"
     >${escHtml(country.name)}</button>`;
   }).join("");
+}
+
+function syncSelectedCountries() {
+  const availableCountries = new Set(rowsInYear(state.selectedYear).map((row) => row.country_name_ghg));
+  state.selectedCountries = state.selectedCountries.filter((country) => availableCountries.has(country));
 }
 
 function render() {
@@ -297,7 +304,6 @@ function drawChart(rows, selectedRows) {
   }
 
   drawSelectedLabels(wheel, selectedRows, angle, innerRadius, segmentMax);
-  drawTopPressureLabels(wheel, rows.slice(0, 8), angle, innerRadius, segmentMax, maxSignalCount);
 }
 
 function drawAnimatedSegments(wheel, segments, rows, visibleVariables, arc, selectedSet) {
@@ -446,17 +452,6 @@ function drawSelectedLabels(wheel, selectedRows, angle, innerRadius, segmentMax)
       const score = activeVariable ? componentScore(d.row, activeVariable.id) : d.row.pressure;
       return `${fmtN(score * 100, 0)} ${activeVariable ? activeVariable.short : "pressure"}`;
     });
-}
-
-function drawTopPressureLabels(wheel, rows, angle, innerRadius, segmentMax, maxSignalCount) {
-  wheel.append("g")
-    .attr("class", "top-markers")
-    .selectAll("circle")
-    .data(rows)
-    .join("circle")
-    .attr("cx", (row) => polar(midAngle(row, angle), innerRadius + segmentMax * (maxSignalCount + 0.16)).x)
-    .attr("cy", (row) => polar(midAngle(row, angle), innerRadius + segmentMax * (maxSignalCount + 0.16)).y)
-    .attr("r", 5.5);
 }
 
 function renderDetails(rows) {
