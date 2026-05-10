@@ -21,7 +21,7 @@
           <div class="nav-menu-panel" aria-label="Visualization pages">
             <a href="../Python/">
               <span>01 / Python</span>
-              <strong>Cleaning and EDA</strong>
+              <strong>White hat and black hat</strong>
             </a>
             <a href="../Tableau/">
               <span>02 / Tableau</span>
@@ -44,56 +44,53 @@
     <main id="top" class="shell">
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-copy">
-          <p class="eyebrow">Data Visualization 2026</p>
+          <p class="eyebrow">Data Visualisation 2025/2026</p>
           <h1 id="page-title">Who pollutes, who pays?</h1>
           <p class="lede">
-            A visual analytics project about climate responsibility, economic
-            capacity, energy transition gaps, and electricity access across
-            countries from 2014 to 2023.
+            An interactive data visualisation system that deconstructs global
+            GHG emissions across geography, wealth, energy access, and
+            measurement framing. 90 countries, 2014–2023.
           </p>
           <div class="hero-facts" aria-label="Project at a glance">
             <div>
               <span>Period</span>
-              <strong>2014-2023</strong>
+              <strong>2014–2023</strong>
             </div>
             <div>
-              <span>Unit</span>
-              <strong>Country-year</strong>
+              <span>Countries</span>
+              <strong>90</strong>
             </div>
             <div>
-              <span>Focus</span>
-              <strong>Climate pressure</strong>
+              <span>Sources</span>
+              <strong>OECD and World Bank</strong>
             </div>
           </div>
         </div>
 
         <aside class="question-card" aria-labelledby="question-title">
-          <p class="eyebrow">Central question</p>
+          <p class="eyebrow">Four research questions</p>
           <h2 id="question-title">
-            Which countries face the strongest climate-action pressure when
-            emissions, wealth, renewables, and access are viewed together?
+            Where are emissions highest? Why do some countries emit more?
+            Are low-emission countries truly clean? Does the metric
+            change who looks guilty?
           </h2>
           <p>
-            We do not treat emissions as a single number. The project compares
-            pollution intensity with economic capacity and energy-system context,
-            so a country can be read as a profile rather than a ranking alone.
+            Public discourse often conflates low emissions with environmental
+            virtue and high emissions with negligence, a framing that obscures
+            the structural drivers of national carbon footprints.
           </p>
-          <div class="signal-ledger" aria-label="Climate pressure signals">
+          <div class="signal-ledger" aria-label="Research questions">
             <div class="ledger-row emissions">
-              <span>Emissions intensity</span>
-              <strong>GHG per person</strong>
+              <strong>Where &mdash; Spatial distribution of emissions</strong>
             </div>
             <div class="ledger-row wealth">
-              <span>Capacity to act</span>
-              <strong>GDP per capita PPP</strong>
+              <strong>Why &mdash; Wealth as a driver of emissions intensity</strong>
             </div>
             <div class="ledger-row energy">
-              <span>Transition gap</span>
-              <strong>Renewable share</strong>
+              <strong>Truly clean &mdash; Energy poverty vs deliberate decarbonisation</strong>
             </div>
             <div class="ledger-row access">
-              <span>Development context</span>
-              <strong>Electricity access</strong>
+              <strong>Which metric &mdash; How framing choices change the narrative</strong>
             </div>
           </div>
         </aside>
@@ -102,38 +99,41 @@
       <section id="story" class="section-card story-section">
         <div class="section-heading">
           <p class="eyebrow">Project story</p>
-          <h2>From country diagnosis to global climate pressure</h2>
+          <h2>From spatial description to ethical reflection</h2>
           <p>
-            The page is organized like a guided report: first the question, then
-            the data, then the tasks, and finally the interactive visualizations.
+            The system forms a coherent analytical arc: first where emissions
+            concentrate, then why, then whether low emissions are genuinely
+            sustainable, and finally whether the metric itself changes the verdict.
           </p>
         </div>
         <div class="story-grid">
           <article class="story-lead">
             <h3>Why this matters</h3>
             <p>
-              Climate debates often collapse into one question: who emits the
-              most? That is important, but incomplete. A fairer interpretation
-              also asks who emits more per person, who has more economic capacity,
-              who still depends on fossil energy, and who has basic electricity
-              access.
+              Climate debates often reduce responsibility to a single number.
+              A fairer interpretation also asks who emits more per person,
+              who has the economic capacity to act, who still depends on
+              fossil energy, and who lacks basic electricity access — because
+              low emissions do not always mean clean choices.
             </p>
           </article>
           <article>
             <h3>Target audience</h3>
             <p>
-              The audience is non-expert readers, students, and policy-curious
-              users who need a clear way to compare countries without reading a
-              technical report. The interface starts with simple explanations and
-              then offers richer interactive views.
+              The system targets an informed general audience — policy students,
+              journalists, and engaged citizens with an interest in climate
+              issues but no assumed statistical background. Design decisions
+              consistently prioritised immediate readability over analytical
+              complexity.
             </p>
           </article>
           <article>
             <h3>Design direction</h3>
             <p>
-              The visual style is warm and editorial: large country names, clear
-              cards, restrained color, and a small number of strong interactions.
-              The goal is to feel like a coherent story, not a folder of charts.
+              Each visual form was chosen to match its task directly. The
+              interface starts with broad spatial and comparative views, then
+              narrows to individual country profiles, and concludes with a
+              creative synthesis of climate-action pressure across all dimensions.
             </p>
           </article>
         </div>
@@ -143,38 +143,47 @@
         <div class="section-heading split-heading">
           <div>
             <p class="eyebrow">Dataset description</p>
-            <h2>Four public data streams joined into one country-year panel</h2>
+            <h2>Four public datasets joined into one country-year panel</h2>
           </div>
           <p class="section-note">
-            Final working file: <strong>df_panel.csv</strong>, covering 2014-2023
-            country-year records after cleaning and integration.
+            Final working file: <strong>df_panel.csv</strong> —
+            789 country-year observations across 90 countries and 11 variables,
+            2014–2023.
           </p>
         </div>
 
         <div class="data-grid">
           <article class="data-card">
             <span class="data-icon emissions"></span>
-            <h3>GHG emissions</h3>
-            <p>OECD air-emissions data gives greenhouse gas emissions per person.</p>
-            <strong>Used for intensity and footprint views</strong>
+            <h3>OECD GHG Emissions</h3>
+            <p>GHG per capita in kg CO₂-equivalent per person, filtered to
+            total emissions excluding LULUCF and restricted to country-level
+            observations.</p>
+            <strong>Primary anchor for the join</strong>
           </article>
           <article class="data-card">
             <span class="data-icon wealth"></span>
-            <h3>GDP per capita PPP</h3>
-            <p>World Bank economic indicators approximate a country's capacity to act.</p>
-            <strong>Used for economic context</strong>
+            <h3>World Bank Economy &amp; Growth</h3>
+            <p>GDP per capita adjusted for purchasing power parity (PPP),
+            chosen over nominal GDP because PPP corrections make cross-country
+            comparisons of living standards more meaningful.</p>
+            <strong>Economic capacity signal</strong>
           </article>
           <article class="data-card">
             <span class="data-icon energy"></span>
-            <h3>Energy transition</h3>
-            <p>World Bank energy indicators describe renewable share and fossil dependence.</p>
-            <strong>Used for transition-gap signals</strong>
+            <h3>World Bank Energy &amp; Mining</h3>
+            <p>Renewable energy share, electricity access as a percentage of
+            population, and fossil fuel consumption share — three complementary
+            signals of a country's energy system.</p>
+            <strong>Transition and access signals</strong>
           </article>
           <article class="data-card">
             <span class="data-icon access"></span>
-            <h3>Population and access</h3>
-            <p>Population and electricity access help separate total scale from basic needs.</p>
-            <strong>Used for total footprint and access context</strong>
+            <h3>World Bank Population</h3>
+            <p>Total population counts used to derive absolute emission totals
+            in megatonnes CO₂-equivalent, enabling the per-capita versus
+            absolute comparison in the white-hat/black-hat views.</p>
+            <strong>Scale and footprint signal</strong>
           </article>
         </div>
 
@@ -183,19 +192,23 @@
             <p class="eyebrow">Limitations and bias</p>
             <h3>What the data can hide</h3>
             <p>
-              Missing values are not random. Some countries are absent from OECD
-              or World Bank indicators, and renewable-energy coverage becomes
-              weaker in recent years. This can make some countries look less
-              comparable than others.
+              The OECD GHG dataset covers only 90 countries, predominantly
+              high- and upper-middle-income economies, introducing a systematic
+              selection bias. Large parts of Sub-Saharan Africa and South Asia
+              appear only partially or not at all. Missing values concentrate
+              in small states and in energy indicators after 2021 as World Bank
+              reporting lags increase.
             </p>
           </article>
           <article>
             <h3>What the metrics simplify</h3>
             <p>
-              GDP per capita is only a proxy for capacity. Emissions per capita
-              does not show historical responsibility, exported consumption, or
-              within-country inequality. The visualizations should support
-              interpretation, not replace context.
+              The renewable energy share variable includes traditional biomass,
+              which can inflate the renewable share of low-income countries
+              without reflecting a genuine clean-energy transition. Electricity
+              access as a proxy for energy poverty is imperfect: a country may
+              have near-universal grid access while still being economically
+              poor. The GHG measure excludes land-use and forestry emissions.
             </p>
           </article>
         </div>
@@ -204,34 +217,35 @@
       <section id="tasks" class="section-card task-section">
         <div class="section-heading">
           <p class="eyebrow">Task analysis</p>
-          <h2>What the system should help users do</h2>
+          <h2>Four analytical tasks in increasing depth</h2>
           <p>
-            These tasks shaped the interface: every visualization should answer
-            a specific question instead of simply displaying another variable.
+            Each task corresponds directly to one or more visualisations.
+            The interface is designed to support exploration at all four levels
+            without requiring prior statistical knowledge.
           </p>
         </div>
-        <ol class="task-list">
-          <li>
-            <span>01</span>
-            <p>Choose a country and understand its emissions profile in plain language.</p>
-          </li>
-          <li>
-            <span>02</span>
-            <p>Compare a country against its regional and global averages for a selected year.</p>
-          </li>
-          <li>
-            <span>03</span>
-            <p>See whether emissions intensity is moving up or down across time.</p>
-          </li>
-          <li>
-            <span>04</span>
-            <p>Identify countries where pressure is high because several dimensions align.</p>
-          </li>
-          <li>
-            <span>05</span>
-            <p>Recognize where missing data or metric choices may limit the interpretation.</p>
-          </li>
-        </ol>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);">
+          <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
+            <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">01</span>
+            <h3 style="margin-top:18px;">Overview</h3>
+            <p style="color:var(--ink);font-weight:800;">Form a spatial mental model of where per-capita emissions are highest and how the global distribution has shifted from 2014 to 2023.</p>
+          </article>
+          <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
+            <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">02</span>
+            <h3 style="margin-top:18px;">Comparison</h3>
+            <p style="color:var(--ink);font-weight:800;">Examine whether wealthier countries systematically emit more and identify which countries break the expected pattern in either direction.</p>
+          </article>
+          <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
+            <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">03</span>
+            <h3 style="margin-top:18px;">Explanation</h3>
+            <p style="color:var(--ink);font-weight:800;">Distinguish countries with low emissions by deliberate decarbonisation from those where low figures reflect limited electricity access and energy poverty.</p>
+          </article>
+          <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
+            <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">04</span>
+            <h3 style="margin-top:18px;">Critical reflection</h3>
+            <p style="color:var(--ink);font-weight:800;">Recognise how the same dataset produces opposite geopolitical narratives depending on whether per-capita or absolute total emissions are visualised.</p>
+          </article>
+        </div>
       </section>
 
       <section id="annotated-snapshot" class="section-card plotly-section">
@@ -415,35 +429,39 @@
 
       <section id="findings" class="section-card conclusion-section">
         <div class="section-heading">
-          <p class="eyebrow">Conclusion</p>
-          <h2>Main findings so far</h2>
+          <p class="eyebrow">Key findings</p>
+          <h2>Climate responsibility cannot be reduced to a single metric</h2>
         </div>
         <div class="finding-grid">
           <article class="finding-lead">
             <span>01</span>
-            <h3>Responsibility is multidimensional</h3>
+            <h3>Wealth explains some, not all</h3>
             <p>
-              A high-emitting country is not always the largest total emitter,
-              and a wealthy country may have more capacity to change even when
-              its current profile looks moderate.
+              Wealthier countries tend to emit more per person, yet this
+              relationship is far from uniform. Countries with similarly high
+              GDP per capita display sharply different emissions profiles,
+              suggesting that development alone does not determine climate
+              pressure.
             </p>
           </article>
           <article>
             <span>02</span>
-            <h3>Regional context changes the story</h3>
+            <h3>Scale and per capita tell opposite stories</h3>
             <p>
-              The same country can look close to the global average but very
-              different from its region. That is why the profile card keeps both
-              comparisons visible.
+              Some countries have very high per-capita emissions but relatively
+              small total footprints. Others combine moderate per-capita values
+              with very large aggregate emissions due to population size.
+              The same data, framed differently, produces incompatible verdicts.
             </p>
           </article>
           <article>
             <span>03</span>
-            <h3>Energy indicators need careful reading</h3>
+            <h3>Low emissions ≠ green transition</h3>
             <p>
-              Renewable share and electricity access are useful, but uneven
-              coverage and near-universal access in wealthy regions mean they
-              should be interpreted as context, not as a simple score.
+              In several lower-income contexts, low emissions coexist with lower
+              electricity access and more limited economic capacity. Low figures
+              should not automatically be read as evidence of successful
+              decarbonisation.
             </p>
           </article>
         </div>
@@ -452,8 +470,9 @@
 
     <footer class="site-footer">
       <p>
-        Data Visualization 2026 · Public-data project using OECD and World Bank
-        indicators · Built as an HTML/CSS/JavaScript project page.
+        Data Visualisation 2025/2026 · LUISS Guido Carli University ·
+        Public-data project using OECD GHG emissions and World Bank indicators ·
+        Baldoni · Bruni · Sebastiani · Torella
       </p>
       <a href="#top">Back to top</a>
     </footer>
