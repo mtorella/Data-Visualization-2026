@@ -1,4 +1,4 @@
-const container = document.getElementById("viz1778342582099");
+const container = document.getElementById("viz1778429314877");
 const vizElement = container?.getElementsByTagName("object")[0];
 
 function sizeTableauViz() {
@@ -10,7 +10,7 @@ function sizeTableauViz() {
   if (width > 800) {
     vizElement.style.height = `${Math.round(width * 0.75)}px`;
   } else if (width > 500) {
-    vizElement.style.height = `${Math.round(width * 0.78)}px`;
+    vizElement.style.height = `${Math.round(width * 0.75)}px`;
   } else {
     vizElement.style.height = "1727px";
   }

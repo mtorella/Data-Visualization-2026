@@ -503,7 +503,7 @@ h3 {
 }
 
 .section-heading p:not(.eyebrow) {
-  max-width: 760px;
+  max-width: 1080px;
   margin-bottom: 0;
 }
 
@@ -559,12 +559,7 @@ h3 {
 }
 
 .story-lead h3 {
-  max-width: 12ch;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.1rem, 3vw, 3.6rem);
-  letter-spacing: -0.04em;
-  line-height: 0.9;
-  text-transform: none;
+  max-width: 16ch;
 }
 
 .story-grid p,
@@ -580,15 +575,26 @@ h3 {
 .data-card {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr);
+  grid-template-areas:
+    "icon title"
+    ". body"
+    ". meta";
   gap: 18px;
   align-items: start;
   min-height: 190px;
 }
 
-.data-card h3,
-.data-card p,
-.data-card strong {
-  grid-column: 2;
+.data-card h3 {
+  grid-area: title;
+  align-self: center;
+  margin-bottom: 2px;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.9rem, 2.4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  text-transform: none;
 }
 
 .data-card strong {
@@ -601,8 +607,17 @@ h3 {
   text-transform: uppercase;
 }
 
+.data-card p {
+  grid-area: body;
+}
+
+.data-card strong {
+  grid-area: meta;
+}
+
 .data-icon {
-  grid-row: 1 / span 3;
+  grid-area: icon;
+  align-self: center;
   display: block;
   width: 54px;
   height: 54px;
