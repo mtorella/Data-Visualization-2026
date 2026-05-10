@@ -1,4 +1,4 @@
-# Data-Visualisation-2026
+# Data Visualization Project
 **Who Pollutes, Who Pays?**: A data visualization project exploring GHG emissions, wealth, and energy access across 90 countries from 2014 to 2023.
 
 ---
