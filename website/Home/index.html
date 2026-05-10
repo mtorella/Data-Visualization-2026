@@ -32,7 +32,7 @@
               <strong>Country profile</strong>
             </a>
             <a href="../Pressure_wheel/">
-              <span>04 / D3.js</span>
+              <span>04 / JavaScript</span>
               <strong>Pressure wheel</strong>
             </a>
           </div>
@@ -87,10 +87,10 @@
               <strong>Why &mdash; Wealth as a driver of emissions intensity</strong>
             </div>
             <div class="ledger-row energy">
-              <strong>Truly clean &mdash; Energy poverty vs deliberate decarbonisation</strong>
+              <strong> How &mdash; Energy poverty vs deliberate decarbonisation</strong>
             </div>
             <div class="ledger-row access">
-              <strong>Which metric &mdash; How framing choices change the narrative</strong>
+              <strong>Different metric &mdash; Different narrative</strong>
             </div>
           </div>
         </aside>
@@ -113,17 +113,17 @@
               Climate debates often reduce responsibility to a single number.
               A fairer interpretation also asks who emits more per person,
               who has the economic capacity to act, who still depends on
-              fossil energy, and who lacks basic electricity access — because
+              fossil energy, and who lacks basic electricity access: because
               low emissions do not always mean clean choices.
             </p>
           </article>
           <article>
             <h3>Target audience</h3>
             <p>
-              The system targets an informed general audience — policy students,
+              The system targets an informed general audience: policy students,
               journalists, and engaged citizens with an interest in climate
               issues but no assumed statistical background. Design decisions
-              consistently prioritised immediate readability over analytical
+              consistently prioritised readability over analytical
               complexity.
             </p>
           </article>
@@ -173,7 +173,7 @@
             <span class="data-icon energy"></span>
             <h3>World Bank Energy &amp; Mining</h3>
             <p>Renewable energy share, electricity access as a percentage of
-            population, and fossil fuel consumption share — three complementary
+            population, and fossil fuel consumption share: three complementary
             signals of a country's energy system.</p>
             <strong>Transition and access signals</strong>
           </article>
@@ -209,6 +209,7 @@
               access as a proxy for energy poverty is imperfect: a country may
               have near-universal grid access while still being economically
               poor. The GHG measure excludes land-use and forestry emissions.
+              Finally, note that the project is descriptive and exploratory rather than causal.
             </p>
           </article>
         </div>
@@ -220,15 +221,14 @@
           <h2>Four analytical tasks in increasing depth</h2>
           <p>
             Each task corresponds directly to one or more visualisations.
-            The interface is designed to support exploration at all four levels
-            without requiring prior statistical knowledge.
+            The interface is designed to support exploration at all four levels.
           </p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);">
           <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
             <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">01</span>
             <h3 style="margin-top:18px;">Overview</h3>
-            <p style="color:var(--ink);font-weight:800;">Form a spatial mental model of where per-capita emissions are highest and how the global distribution has shifted from 2014 to 2023.</p>
+            <p style="color:var(--ink);font-weight:800;">Form a spatial model of where per-capita emissions are highest and how the global distribution has shifted from 2014 to 2023.</p>
           </article>
           <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
             <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">02</span>
@@ -238,12 +238,12 @@
           <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
             <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">03</span>
             <h3 style="margin-top:18px;">Explanation</h3>
-            <p style="color:var(--ink);font-weight:800;">Distinguish countries with low emissions by deliberate decarbonisation from those where low figures reflect limited electricity access and energy poverty.</p>
+            <p style="color:var(--ink);font-weight:800;">Distinguish countries with low emissions by deliberate decarbonisation from those where low figures reflect energy poverty.</p>
           </article>
           <article style="background:#fbf9f1;padding:var(--space);min-height:220px;">
             <span style="color:rgba(97,112,108,0.38);font-family:Georgia,serif;font-size:3.4rem;font-weight:800;line-height:0.86;">04</span>
             <h3 style="margin-top:18px;">Critical reflection</h3>
-            <p style="color:var(--ink);font-weight:800;">Recognise how the same dataset produces opposite geopolitical narratives depending on whether per-capita or absolute total emissions are visualised.</p>
+            <p style="color:var(--ink);font-weight:800;">Recognise how the same dataset produces opposite geopolitical narratives depending on different chart choices.</p>
           </article>
         </div>
       </section>
@@ -251,12 +251,12 @@
       <section id="annotated-snapshot" class="section-card plotly-section">
         <div class="section-heading split-heading">
           <div>
-            <p class="eyebrow">Explanatory view · 2021</p>
+            <p class="eyebrow">A first glance at our data </p>
             <h2>Reading the chart: five stories in one picture</h2>
           </div>
           <p class="section-note">
-            A guided snapshot for 2021. Each callout points to a cluster worth
-            knowing — no prior data experience needed.
+            A guided snapshot for 2021. Each callout points to a pattern worth
+            knowing.
           </p>
         </div>
 
@@ -264,16 +264,17 @@
           <div class="plotly-copy">
             <h3 id="snapshot-title">What does the chart show?</h3>
             <p>
-              Every bubble is a country in 2021. Move right → richer country.
-              Move up → more GHG per person. Bigger bubble → larger population.
-              Color shows the world region.
+              Each bubble represents a country in 2021. Its horizontal position
+              reflects GDP per capita, its vertical position reflects GHG emissions
+              per person, its size encodes total population, and its colour
+              indicates world region.
             </p>
             <p>
-              Five callouts highlight the most important patterns. You can still
-              hover on any bubble to read the exact figures for that country.
+              Five patterns can be identified in this chart.
+              Hover over any bubble to read the exact values for that country.
             </p>
             <ul style="padding-left:1.2em; line-height:1.8">
-              <li><strong>Top right</strong> — fossil-fuel exporters: rich and very heavy emitters.</li>
+              <li><strong>Top right</strong> - fossil-fuel exporters: rich and very heavy emitters.</li>
               <li><strong>Right, mid-height</strong> — USA, Canada, Australia: wealthy but fossil-heavy.</li>
               <li><strong>Right, low</strong> — Western Europe: similar wealth, far lower emissions.</li>
               <li><strong>Middle</strong> — emerging economies: wide spread in both dimensions.</li>
@@ -308,12 +309,11 @@
           <div class="plotly-copy">
             <h3 id="plotly-title">GHG versus wealth over time</h3>
             <p>
-              Each dot is a country. Horizontal position shows GDP per capita
-              on a log scale — so equal distances represent equal percentage
+              Each dot is a country. This time horizontal position shows GDP per capita
+              on a log scale, so equal distances represent equal percentage
               differences in wealth, not equal dollar amounts. Vertical position
               shows GHG emissions per capita, color reinforces emissions
-              intensity, and dot size represents population (capped at 350 million
-              so large nations like China and India don't collapse the scale).
+              intensity, and dot size represents population.
             </p>
             <p>
               The vertical axis is capped at 35 t CO₂e per person to keep the
@@ -409,7 +409,7 @@
           <article class="visual-card featured creative" data-tool="javascript">
             <div class="visual-meta">
               <span class="visual-number">04</span>
-              <span class="tool-pill">D3.js creative</span>
+              <span class="tool-pill">JavaScript</span>
             </div>
             <h3>Transition pressure wheel</h3>
             <ul class="visual-points">
@@ -432,36 +432,34 @@
           <p class="eyebrow">Key findings</p>
           <h2>Climate responsibility cannot be reduced to a single metric</h2>
         </div>
-        <div class="finding-grid">
-          <article class="finding-lead">
+        <div class="finding-grid" style="align-items:stretch;">
+          <article style="min-height:280px;">
             <span>01</span>
             <h3>Wealth explains some, not all</h3>
             <p>
               Wealthier countries tend to emit more per person, yet this
               relationship is far from uniform. Countries with similarly high
-              GDP per capita display sharply different emissions profiles,
+              GDP per capita display different emissions profiles,
               suggesting that development alone does not determine climate
               pressure.
             </p>
           </article>
-          <article>
+          <article style="min-height:280px;">
             <span>02</span>
             <h3>Scale and per capita tell opposite stories</h3>
             <p>
               Some countries have very high per-capita emissions but relatively
-              small total footprints. Others combine moderate per-capita values
-              with very large aggregate emissions due to population size.
-              The same data, framed differently, produces incompatible verdicts.
+              small total footprints, while others combine moderate per-capita
+              values with very large aggregate emissions due to population size.
             </p>
           </article>
-          <article>
+          <article style="min-height:280px;">
             <span>03</span>
             <h3>Low emissions ≠ green transition</h3>
             <p>
-              In several lower-income contexts, low emissions coexist with lower
-              electricity access and more limited economic capacity. Low figures
-              should not automatically be read as evidence of successful
-              decarbonisation.
+              Low emissions should not automatically be read as evidence of
+              successful transition. In several lower-income contexts they
+              coexist with more limited economic capacity. 
             </p>
           </article>
         </div>
