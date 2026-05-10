@@ -84,7 +84,7 @@ h1 {
 }
 
 h2 {
-  max-width: 920px;
+  max-width: 1080px;
   margin-bottom: 0;
   font-size: clamp(1.55rem, 2.3vw, 2.7rem);
   letter-spacing: 0.015em;
@@ -295,9 +295,16 @@ h3 {
 
 .filter-bar {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   margin-top: 4px;
+  justify-self: end;
+  padding-right: 12px;
+}
+
+.filter-button {
+  flex: 0 0 auto;
+  padding: 0 16px;
 }
 
 .button,
@@ -663,6 +670,50 @@ h3 {
   line-height: 1.35;
 }
 
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.task-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-height: 228px;
+  padding: var(--space);
+  background: #fbf9f1;
+}
+
+.task-card-index {
+  color: rgba(97, 112, 108, 0.38);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 0.86;
+}
+
+.task-card h3 {
+  margin: 2px 0 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 2.7vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+  text-transform: none;
+}
+
+.task-card p {
+  max-width: 34ch;
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: 1.04rem;
+  font-weight: 500;
+  line-height: 1.42;
+}
+
 .visual-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -861,6 +912,24 @@ h3 {
   box-shadow: inset 0 0 0 1px rgba(251, 247, 236, 0.72);
 }
 
+#annotated-snapshot .plotly-frame-wrap {
+  min-height: 800px;
+}
+
+#annotated-snapshot .plotly-frame {
+  height: 780px;
+  min-height: 780px;
+}
+
+#scatter-timeline .plotly-frame-wrap {
+  min-height: 940px;
+}
+
+#scatter-timeline .plotly-frame {
+  height: 920px;
+  min-height: 920px;
+}
+
 .finding-grid {
   grid-template-columns: 1.2fr 0.9fr 0.9fr;
 }
@@ -959,9 +1028,14 @@ h3 {
 
   .story-grid,
   .finding-grid,
+  .task-grid,
   .task-list,
   .plotly-showcase {
     grid-template-columns: 1fr;
+  }
+
+  .task-card {
+    min-height: 180px;
   }
 
   .task-list li {
@@ -1034,6 +1108,24 @@ h3 {
   .plotly-frame {
     height: 820px;
     min-height: 780px;
+  }
+
+  #annotated-snapshot .plotly-frame-wrap {
+    min-height: 700px;
+  }
+
+  #annotated-snapshot .plotly-frame {
+    height: 700px;
+    min-height: 700px;
+  }
+
+  #scatter-timeline .plotly-frame-wrap {
+    min-height: 860px;
+  }
+
+  #scatter-timeline .plotly-frame {
+    height: 840px;
+    min-height: 840px;
   }
 
   .site-footer {
