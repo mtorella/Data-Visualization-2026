@@ -119,17 +119,21 @@ p {
 .shell {
   width: min(1480px, calc(100% - 36px));
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 34px 0;
 }
 
 .topbar {
-  display: block;
-  margin-bottom: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: clamp(24px, 3vw, 44px);
+  align-items: start;
+  margin-bottom: 20px;
 }
 
 .title-block {
   display: grid;
   gap: 8px;
+  max-width: 980px;
 }
 
 .eyebrow {
@@ -166,18 +170,18 @@ h3 {
 }
 
 .lede {
-  max-width: 790px;
+  max-width: 760px;
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.05rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .page-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .button {
@@ -222,11 +226,8 @@ h3 {
 }
 
 .ethics-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
-  gap: clamp(18px, 3vw, 42px);
-  align-items: end;
-  padding: clamp(24px, 3vw, 42px);
+  display: block;
+  padding: clamp(24px, 3vw, 34px) clamp(24px, 3vw, 42px) 18px;
   border-bottom: 1px solid var(--line);
   background:
     radial-gradient(circle at 95% 20%, rgba(200, 154, 50, 0.16), transparent 15rem),
@@ -242,6 +243,7 @@ h3 {
 .source-card {
   display: grid;
   gap: 8px;
+  margin-top: 8px;
   padding: 18px;
   border: 1px solid rgba(21, 95, 74, 0.17);
   border-radius: 8px;
@@ -366,7 +368,7 @@ h3 {
     justify-content: flex-start;
   }
 
-  .ethics-header,
+  .topbar,
   .ethics-grid {
     grid-template-columns: 1fr;
   }
