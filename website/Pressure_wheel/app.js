@@ -188,9 +188,9 @@ function render() {
 
 function drawChart(rows, selectedRows) {
   const width = 1240;
-  const height = 1220;
+  const height = 1140;
   const cx = width / 2;
-  const cy = height / 2 + 34;
+  const cy = height / 2 - 10;
   const activeVariable = getActiveVariable();
   const visibleVariables = activeVariable ? [activeVariable] : variables;
   const maxSignalCount = activeVariable ? 1 : variables.length;
@@ -298,7 +298,6 @@ function drawChart(rows, selectedRows) {
 
   drawSelectedLabels(wheel, selectedRows, angle, innerRadius, segmentMax);
   drawTopPressureLabels(wheel, rows.slice(0, 8), angle, innerRadius, segmentMax, maxSignalCount);
-  drawLegend(svg, activeVariable);
 }
 
 function drawAnimatedSegments(wheel, segments, rows, visibleVariables, arc, selectedSet) {
@@ -458,34 +457,6 @@ function drawTopPressureLabels(wheel, rows, angle, innerRadius, segmentMax, maxS
     .attr("cx", (row) => polar(midAngle(row, angle), innerRadius + segmentMax * (maxSignalCount + 0.16)).x)
     .attr("cy", (row) => polar(midAngle(row, angle), innerRadius + segmentMax * (maxSignalCount + 0.16)).y)
     .attr("r", 5.5);
-}
-
-function drawLegend(svg, activeVariable) {
-  const legend = svg.append("g")
-    .attr("class", "wheel-legend")
-    .attr("transform", "translate(56 54)");
-
-  legend.append("text")
-    .attr("class", "legend-title")
-    .text(activeVariable ? "Active signal" : "Stack ingredients");
-
-  legend.selectAll("g")
-    .data(activeVariable ? [activeVariable] : variables)
-    .join("g")
-    .attr("class", "svg-legend-item")
-    .attr("transform", (d, i) => `translate(0 ${30 + i * 28})`)
-    .call((groups) => {
-      groups.append("rect")
-        .attr("width", 18)
-        .attr("height", 12)
-        .attr("rx", 3)
-        .attr("fill", (d) => d.color);
-
-      groups.append("text")
-        .attr("x", 28)
-        .attr("y", 11)
-        .text((d) => d.label);
-    });
 }
 
 function renderDetails(rows) {
